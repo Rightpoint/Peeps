@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Rightpoint.Peeps.Client.DI;
+using Rightpoint.Peeps.Client.Pages;
 
 namespace Rightpoint.Peeps.Client
 {
@@ -28,9 +30,6 @@ namespace Rightpoint.Peeps.Client
         /// </summary>
         public App()
         {
-            Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
-                Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
-                Microsoft.ApplicationInsights.WindowsCollectors.Session);
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
@@ -72,6 +71,9 @@ namespace Rightpoint.Peeps.Client
 
             if (rootFrame.Content == null)
             {
+                // initialize IoC container so it runs prior to navigation
+                UnityContainerFactory.GetContainer();
+
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
