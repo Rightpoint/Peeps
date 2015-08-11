@@ -217,9 +217,11 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\Configuration.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\TodoItemController.cs" />
-    <Compile Include="DataObjects\TodoItem.cs" />
+    <Compile Include="Controllers\BaseTableController.cs" />
+    <Compile Include="Controllers\PeepController.cs" />
+    <Compile Include="DataObjects\Peep.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
     <Compile Include="Global.asax.cs">

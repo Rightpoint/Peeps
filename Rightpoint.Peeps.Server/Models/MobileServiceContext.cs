@@ -10,36 +10,23 @@ namespace Rightpoint.Peeps.Server.Models
 
     public class MobileServiceContext : DbContext
     {
-        // You can add custom code to this file. Changes will not be overwritten.
-        // 
-        // If you want Entity Framework to alter your database
-        // automatically whenever you change your model schema, please use data migrations.
-        // For more information refer to the documentation:
-        // http://msdn.microsoft.com/en-us/data/jj591621.aspx
-        //
-        // To enable Entity Framework migrations in the cloud, please ensure that the 
-        // service name, set by the 'MS_MobileServiceName' AppSettings in the local 
-        // Web.config, is the same as the service name when hosted in Azure.
+        private const string ConnectionStringName = "Name=MS_TableConnectionString";
+        public string Schema { get; private set; }
 
-        private const string connectionStringName = "Name=MS_TableConnectionString";
-
-        public MobileServiceContext() : base(connectionStringName)
+        public MobileServiceContext() : base(ConnectionStringName)
         {
+            this.Schema = ServiceSettingsDictionary.GetSchemaName();
         }
 
-        public DbSet<TodoItem> TodoItems { get; set; }
+        public DbSet<Peep> Peeps { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            string schema = ServiceSettingsDictionary.GetSchemaName();
-            if (!string.IsNullOrEmpty(schema))
-            {
-                modelBuilder.HasDefaultSchema(schema);
-            }
-
             modelBuilder.Conventions.Add(
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 

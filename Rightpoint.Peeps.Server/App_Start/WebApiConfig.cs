@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data.Entity;
+﻿using System.Data.Entity.Migrations;
 using System.Web.Http;
-using Rightpoint.Peeps.Server.DataObjects;
-using Rightpoint.Peeps.Server.Models;
 using Microsoft.WindowsAzure.Mobile.Service;
+using Rightpoint.Peeps.Server.App_Start;
 
 namespace Rightpoint.Peeps.Server
 {
@@ -13,7 +9,6 @@ namespace Rightpoint.Peeps.Server
     {
         public static void Register()
         {
-            // Use this class to set configuration options for your mobile service
             ConfigOptions options = new ConfigOptions();
 
             // Use this class to set WebAPI configuration options
@@ -21,28 +16,11 @@ namespace Rightpoint.Peeps.Server
 
             // To display errors in the browser during development, uncomment the following
             // line. Comment it out again when you deploy your service for production use.
-            // config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
+            config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always; // TODO: remove this for prod
 
-            Database.SetInitializer(new MobileServiceInitializer());
-        }
-    }
-
-    public class MobileServiceInitializer : DropCreateDatabaseIfModelChanges<MobileServiceContext>
-    {
-        protected override void Seed(MobileServiceContext context)
-        {
-            List<TodoItem> todoItems = new List<TodoItem>
-            {
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
-            };
-
-            foreach (TodoItem todoItem in todoItems)
-            {
-                context.Set<TodoItem>().Add(todoItem);
-            }
-
-            base.Seed(context);
+            // this sets up configuration of your database, including your namespace and automatic migration settings
+            DbMigrator migrator = new DbMigrator(new Configuration());
+            migrator.Update();
         }
     }
 }
