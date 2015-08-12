@@ -15,6 +15,9 @@ namespace Rightpoint.Peeps.Server.DataObjects
         [MaxLength(100)]
         public string Hometown { get; set; }
 
+        [Required, MaxLength(20)]
+        public string Office { get; set; }
+
         public byte[] ImageBytes { get; set; }
 
         [NotMapped]
