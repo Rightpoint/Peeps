@@ -1,7 +1,9 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using Windows.UI.Xaml.Navigation;
-using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
+using Microsoft.WindowsAzure.MobileServices;
+using Rightpoint.Peeps.Client.Infrastructure;
 using Rightpoint.Peeps.Client.Models;
 
 namespace Rightpoint.Peeps.Client.ViewModels
@@ -12,7 +14,10 @@ namespace Rightpoint.Peeps.Client.ViewModels
 
         public MainViewModel(NavigationService navigationService) : base(navigationService)
         {
-            this.Peeps = new ObservableCollection<Peep>(); // TODO: sync table to populate UI with real data
+            PeepsMobileServiceClient client = new PeepsMobileServiceClient();
+            IMobileServiceTable<Peep> peeps = client.GetTable<Peep>();
+
+            this.Peeps = Peeps.AsEnumerable().ToObservableCollection();
         }
 
         public override void OnNavigatedTo(NavigationEventArgs e)
