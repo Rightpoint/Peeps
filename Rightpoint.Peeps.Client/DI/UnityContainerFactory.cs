@@ -6,6 +6,8 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
+using Microsoft.WindowsAzure.MobileServices;
+using Rightpoint.Peeps.Client.Infrastructure;
 using Rightpoint.Peeps.Client.Pages;
 
 namespace Rightpoint.Peeps.Client.DI
@@ -26,6 +28,7 @@ namespace Rightpoint.Peeps.Client.DI
 
             RegisterTypes("Application", () => RegisterApplication(_container));
             RegisterTypes("Services", () => RegisterServices(_container));
+            RegisterTypes("Infrastructure", () => RegisterInfrastructure(_container));
             RegisterTypes("Misc", () => BootstrapServiceLocator(_container));
 
             return _container;
@@ -52,6 +55,11 @@ namespace Rightpoint.Peeps.Client.DI
             container.RegisterInstance(navigationService, new HierarchicalLifetimeManager());
 
             container.RegisterType<IDialogService, DialogService>(new HierarchicalLifetimeManager());
+        }
+
+        private static void RegisterInfrastructure(IUnityContainer container)
+        {
+            container.RegisterType<IMobileServiceClient, PeepsMobileServiceClient>(new HierarchicalLifetimeManager());
         }
 
         private static void BootstrapServiceLocator(IUnityContainer container)

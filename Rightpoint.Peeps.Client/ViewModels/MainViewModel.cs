@@ -1,28 +1,32 @@
-﻿using System.Collections.ObjectModel;
-using System.Linq;
+﻿using System;
+using System.Collections.ObjectModel;
 using Windows.UI.Xaml.Navigation;
 using GalaSoft.MvvmLight.Views;
 using Microsoft.WindowsAzure.MobileServices;
-using Rightpoint.Peeps.Client.Infrastructure;
 using Rightpoint.Peeps.Client.Models;
 
 namespace Rightpoint.Peeps.Client.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
+        private readonly IMobileServiceClient _mobileServiceClient;
+
         public ObservableCollection<Peep> Peeps { get; set; }
 
-        public MainViewModel(NavigationService navigationService) : base(navigationService)
+        public MainViewModel(NavigationService navigationService, IMobileServiceClient mobileServiceClient) : base(navigationService)
         {
-            PeepsMobileServiceClient client = new PeepsMobileServiceClient();
-            IMobileServiceTable<Peep> peeps = client.GetTable<Peep>();
+            if (mobileServiceClient == null) throw new ArgumentNullException(nameof(mobileServiceClient));
 
-            this.Peeps = Peeps.AsEnumerable().ToObservableCollection();
+            this._mobileServiceClient = mobileServiceClient;
         }
 
-        public override void OnNavigatedTo(NavigationEventArgs e)
+        public override async void OnNavigatedTo(NavigationEventArgs e)
         {
             // load logic (note that "e" contains Parameter)
+
+            IMobileServiceTable<Peep> peeps = this._mobileServiceClient.GetTable<Peep>();
+
+            this.Peeps = await peeps.ToCollectionAsync();
 
             base.OnNavigatedTo(e);
         }
