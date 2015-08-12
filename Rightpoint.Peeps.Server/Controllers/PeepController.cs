@@ -2,7 +2,7 @@
 
 namespace Rightpoint.Peeps.Server.Controllers
 {
-    public class VehicleManufacturerController : BaseTableController<Peep>
+    public class PeepController : BaseTableController<Peep>
     {
     }
 }
