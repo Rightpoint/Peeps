@@ -1,20 +1,18 @@
-﻿using Windows.UI.Xaml.Navigation;
+﻿using System.Collections.ObjectModel;
+using Windows.UI.Xaml.Navigation;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
+using Rightpoint.Peeps.Client.Models;
 
 namespace Rightpoint.Peeps.Client.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        public string HelloWorldText { get; set; }
-
-        public RelayCommand NavigateCommand { get; set; }
+        public ObservableCollection<Peep> Peeps { get; set; }
 
         public MainViewModel(NavigationService navigationService) : base(navigationService)
         {
-            this.NavigateCommand = new RelayCommand(() => base.NavigationService.NavigateTo("SecondPage", "Custom parameter"));
-
-            this.HelloWorldText = "Hello world.";
+            this.Peeps = new ObservableCollection<Peep>(); // TODO: sync table to populate UI with real data
         }
 
         public override void OnNavigatedTo(NavigationEventArgs e)
