@@ -7,7 +7,6 @@ using System.IO;
 using System.Linq;
 using Rightpoint.Peeps.Server.DataObjects;
 using Rightpoint.Peeps.Server.Models;
-//using Rightpoint.Peeps.Sync.Models;
 
 namespace Rightpoint.Peeps.Sync
 {
@@ -26,8 +25,26 @@ namespace Rightpoint.Peeps.Sync
                     Name = "Nick Groos",
                     Hometown = "Grand Rapids, MI",
                     Team = "App Dev",
+                    Office = "Chicago",
                     ImagePath = @"c:\temp\people\NickGroos.jpg"
+                },
+                new Peep
+                {
+                    Name = "Dev Deol",
+                    Hometown = "Arlington Heights, IL",
+                    Team = "App Dev",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\DevDeol.jpg"
+                },
+                new Peep
+                {
+                    Name = "Steve Mierop",
+                    Hometown = "La Grange, IL",
+                    Team = "App Dev",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\SteveMierop.jpg"
                 }
+
             };
             
             foreach (Peep peep in peeps)
@@ -46,15 +63,20 @@ namespace Rightpoint.Peeps.Sync
                     peep.Deleted = false;
                     
                     DbContext.Peeps.Add(peep);
+
+                    Console.WriteLine($"Adding {peep.Name}");
                 }
                 else
                 {
                     currentPeep.Name = peep.Name;
                     currentPeep.Hometown = peep.Hometown;
                     currentPeep.Team = peep.Team;
+                    currentPeep.Office = peep.Office;
                     currentPeep.ImageBytes = peep.ImageBytes;
 
                     currentPeep.UpdatedAt = DateTime.UtcNow;
+
+                    Console.WriteLine($"Updating {peep.Name}");
                 }
             }
 
