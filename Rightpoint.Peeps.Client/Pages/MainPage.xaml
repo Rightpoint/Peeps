@@ -11,7 +11,10 @@
         <FlipView ItemsSource="{Binding Path=Peeps, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="400" Width="400">
             <FlipView.ItemTemplate>
                 <DataTemplate>
-                    <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" />
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}"/>
+                       <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" /> 
+                    </StackPanel>
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>

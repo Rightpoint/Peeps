@@ -11,7 +11,7 @@ namespace Rightpoint.Peeps.Client.ViewModels
     {
         private readonly IMobileServiceClient _mobileServiceClient;
 
-        public ObservableCollection<Peep> Peeps { get; set; }
+        public ObservableCollection<Peep> Peeps { get; set; } = new ObservableCollection<Peep>();
 
         public MainViewModel(NavigationService navigationService, IMobileServiceClient mobileServiceClient) : base(navigationService)
         {
@@ -26,9 +26,14 @@ namespace Rightpoint.Peeps.Client.ViewModels
 
             IMobileServiceTable<Peep> peeps = this._mobileServiceClient.GetTable<Peep>();
 
-            this.Peeps = await peeps.ToCollectionAsync();
+            var peepsList = await peeps.ToCollectionAsync();
 
-           base.OnNavigatedTo(e);
+            foreach (var p in peepsList)
+            {
+                this.Peeps.Add(p);
+            }
+
+            base.OnNavigatedTo(e);
         }
     }
 }
