@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rightpoint.Peeps.Sync.Models
+﻿namespace Rightpoint.Peeps.Sync.Models
 {
     public class Peep
     {
