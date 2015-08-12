@@ -99,6 +99,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Converters\ByteArrayToImageConverter.cs" />
     <Compile Include="DI\UnityContainerFactory.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Infrastructure\PeepsMobileServiceClient.cs" />

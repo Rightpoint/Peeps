@@ -28,7 +28,7 @@ namespace Rightpoint.Peeps.Client.ViewModels
 
             this.Peeps = await peeps.ToCollectionAsync();
 
-            base.OnNavigatedTo(e);
+           base.OnNavigatedTo(e);
         }
     }
 }

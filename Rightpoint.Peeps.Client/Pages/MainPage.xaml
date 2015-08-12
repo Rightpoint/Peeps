@@ -8,6 +8,12 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="Hello world" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <FlipView ItemsSource="{Binding Path=Peeps, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="400" Width="400">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Path=Name, Mode=OneWay}" />
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
     </Grid>
 </pages:PageBase>
