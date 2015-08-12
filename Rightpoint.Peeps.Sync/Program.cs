@@ -43,8 +43,23 @@ namespace Rightpoint.Peeps.Sync
                     Team = "App Dev",
                     Office = "Chicago",
                     ImagePath = @"c:\temp\people\SteveMierop.jpg"
+                },
+                new Peep
+                {
+                    Name = "Alex Zebrov",
+                    Hometown = "Narva, Estonia",
+                    Team = "Managed Services",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\AlexZebrov.jpg"
+                },
+                new Peep
+                {
+                    Name = "Bartel Welch",
+                    Hometown = "Detroit, MI",
+                    Team = "App Dev",
+                    Office = "Detroit",
+                    ImagePath = @"c:\temp\people\BartelWelch.jpg"
                 }
-
             };
             
             foreach (Peep peep in peeps)
