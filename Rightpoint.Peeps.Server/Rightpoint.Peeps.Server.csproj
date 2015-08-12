@@ -223,7 +223,6 @@
     <Compile Include="Controllers\PeepController.cs" />
     <Compile Include="DataObjects\Peep.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
-    <Compile Include="ScheduledJobs\SampleJob.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

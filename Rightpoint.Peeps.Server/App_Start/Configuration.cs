@@ -9,8 +9,9 @@ namespace Rightpoint.Peeps.Server.App_Start
         {
             base.AutomaticMigrationsEnabled = true;
             base.AutomaticMigrationDataLossAllowed = true;
-            base.ContextKey = "Rightpoint.Peeps.Server.Models.MobileServiceContext"; // path to MobileServiceContext
             base.ContextType = typeof(MobileServiceContext);
+            base.ContextKey = base.ContextType.AssemblyQualifiedName;// TODO: make sure this is right "Rightpoint.Peeps.Server.Models.MobileServiceContext"; // path to MobileServiceContext
+            
         }
     }
 }
