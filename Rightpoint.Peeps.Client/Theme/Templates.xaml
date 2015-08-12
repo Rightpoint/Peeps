@@ -1,0 +1,85 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+    xmlns:converter="using:Rightpoint.WowWall.Client.App.Converters">
+
+    <!-- Converters -->
+    <converter:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter" />
+    <converter:ToUpperCaseConverter x:Key="ToUpperCaseConverter" />
+
+    <ItemsPanelTemplate x:Key="FlipView_Vertical">
+        <VirtualizingStackPanel Orientation="Vertical"/>
+    </ItemsPanelTemplate>
+
+    <!-- Flip View -->
+    <DataTemplate x:Key="FlipView_WelcomeTemplate">
+        <Grid>
+            <Image Width="Auto" Height="270" Source="{Binding Image}" Stretch="UniformToFill"/>
+            <Border Background="#A5000000" Height="80" VerticalAlignment="Bottom">
+                <TextBlock Text="{Binding Name}" FontFamily="Segoe UI" FontSize="26.667" Foreground="#CCFFFFFF" Padding="15,20"/>
+            </Border>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Name="FlipView_AccoladesTemplate">
+        <Image Source="{Binding Image, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </DataTemplate>
+
+    <DataTemplate x:Name="FlipView_PeopleTemplate">
+        <Grid Background="{StaticResource LightGray}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".45*"/>
+                <ColumnDefinition Width=".55*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Margin="0,-2" Source="{Binding Image, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="UniformToFill" HorizontalAlignment="Center"/>
+            <StackPanel Grid.Column="1" VerticalAlignment="Bottom">
+                <TextBlock Text="{Binding Name}" TextWrapping="Wrap" Style="{StaticResource Subheading}" Foreground="{StaticResource DarkSmoke}" Padding="20,10,20,0" FontFamily="ms-appx:/Fonts/KulturistaSemibold.otf#Kulturista" FontSize="28"/>
+                <TextBlock Text="{Binding Title}" TextWrapping="Wrap" Foreground="{StaticResource DarkSmoke}" Padding="20,10,20,20" FontFamily="ms-appx:/Fonts/KulturistaLight.otf#Kulturista" FontSize="16"/>
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Name="FlipView_QuoteTemplate">
+        <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".15*"/>
+                <RowDefinition Height=".85*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" FontSize="44" Text="&#xe807;" FontFamily="ms-appx:/Fonts/ValuesMedium.ttf#fontello" Foreground="{StaticResource RpOrange}" HorizontalAlignment="Center" Margin="0,-10,0,0"/>
+            <TextBlock Grid.Row="1" FontSize="36" LineHeight="44" Foreground="{StaticResource OffWhite}" TextWrapping="WrapWholeWords" VerticalAlignment="Center" Text="{Binding Body}" TextTrimming="WordEllipsis" FontFamily="ms-appx:/Fonts/KulturistaLight.otf#Kulturista"/>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Name="FlipView_ValuesTemplate">
+        <StackPanel Orientation="Horizontal" Background="{Binding Color}">
+            <TextBlock Margin="30,0" Text="{Binding Image}" Style="{StaticResource ValuesFont}"/>
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <TextBlock Text="{Binding Name, Converter={StaticResource ToUpperCaseConverter}}" Style="{StaticResource HeaderTextBlockStyle}" Foreground="{StaticResource OffWhite}" Margin="0,20,0,0"/>
+                <TextBlock Text="{Binding Subtitle}" Style="{StaticResource SubheaderTextBlockStyle}" Foreground="{StaticResource OffWhite}" FontFamily="ms-appx:/Fonts/KulturistaSemibold.otf#Kulturista" TextWrapping="WrapWholeWords"/>
+            </StackPanel>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Name="FlipView_BlogsTemplate">
+        <Grid Background="{StaticResource OffWhite}">
+            <Image Source="{Binding Image}" Stretch="Fill"/>
+            <TextBlock Text="{Binding Title}" Foreground="{StaticResource Cloudy}" Padding="20,10" VerticalAlignment="Bottom" TextWrapping="WrapWholeWords" Style="{StaticResource SubheaderTextBlockStyle}" FontFamily="ms-appx:/Fonts/KulturistaSemibold.otf#Kulturista" LineHeight="42"/>
+        </Grid>
+    </DataTemplate>
+    
+    <!-- Grid View -->
+    <DataTemplate x:Name="GridView_People">
+        <Grid Height="275" Width="275" Background="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Grid.RowSpan="2" Source="{Binding Image, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="UniformToFill" VerticalAlignment="Center"/>
+            <StackPanel Grid.Row="1" Padding="15,10" Background="{StaticResource SemiTransparentNotBlack}">
+                <TextBlock Text="{Binding Name}" Foreground="{StaticResource OffWhite}" FontFamily="ms-appx:/Fonts/KulturistaSemibold.otf#Kulturista" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+            </StackPanel>
+        </Grid>
+    </DataTemplate>
+
+</ResourceDictionary>

@@ -93,6 +93,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Fonts\DIN.otf" />
+    <Content Include="Fonts\DINPro-Bold.otf" />
+    <Content Include="Fonts\DINPro-Medium.otf" />
+    <Content Include="Fonts\KulturistaBold.otf" />
+    <Content Include="Fonts\KulturistaLight.otf" />
+    <Content Include="Fonts\KulturistaMedium.otf" />
+    <Content Include="Fonts\KulturistaSemibold.otf" />
+    <Content Include="Fonts\KulturistaThin.otf" />
+    <Content Include="Fonts\ValuesMedium.ttf" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -122,6 +131,7 @@
   <ItemGroup>
     <Content Include="Assets\Square71x71Logo.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Fonts\ValuesMediumFont_reference.txt" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -140,6 +150,22 @@
     <Page Include="Pages\MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Base.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Theme\Templates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

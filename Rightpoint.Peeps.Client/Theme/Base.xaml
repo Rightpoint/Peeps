@@ -1,0 +1,69 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Override -->
+    <Style TargetType="TextBlock">
+        <Setter Property="FontFamily" Value="ms-appx:///Fonts/KulturistaMedium.otf#Kulturista" />
+        <Setter Property="FontSize" Value="16"/>
+    </Style>
+
+
+    <!-- Common -->
+    <Style x:Key="Heading" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="48" />
+        <Setter Property="FontFamily" Value="ms-appx:///Fonts/KulturistaSemibold.otf#Kulturista"/>
+    </Style>
+
+    <Style x:Key="Subheading" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="24" />
+        <Setter Property="FontFamily" Value="ms-appx:///Fonts/KulturistaMedium.otf#Kulturista"/>
+    </Style>
+    
+    <Style x:Key="LongCopy" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Foreground" Value="{StaticResource NotBlack}" />
+        <Setter Property="LineHeight" Value="30" />
+        <Setter Property="Margin" Value="0,20,0,40" />
+        <Setter Property="TextWrapping" Value="WrapWholeWords" />
+        <Setter Property="FontFamily" Value="ms-appx:///Fonts/KulturistaMedium.otf#Kulturista"/>
+    </Style>
+    
+    <Style x:Key="HorizontalScrollView" TargetType="ScrollViewer">
+        <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="HorizontalScrollMode" Value="Enabled"/>
+        <Setter Property="VerticalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="VerticalScrollMode" Value="Disabled"/>
+    </Style>
+       
+
+    
+    <!-- Main Grid -->
+    <Style x:Key="ValuesFont" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="160" />
+        <Setter Property="FontFamily" Value="ms-appx:/Fonts/ValuesMedium.ttf#fontello"/>
+        <Setter Property="Width" Value="175"/>
+        <!--<Setter Property="Margin" Value="20"/>-->
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource OffWhite}"/>
+    </Style>
+    
+    <!-- Values Page -->
+    <Style x:Key="ValuesGridStyle" TargetType="Grid">
+        <Setter Property="Width" Value="375"/>
+        <Setter Property="Background" Value="{StaticResource LightGray}"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Height" Value="Auto"/>
+    </Style>
+
+    <Style x:Key="ValuesImageStyle" TargetType="Image">
+        <Setter Property="Stretch" Value="None"/>
+    </Style>
+
+    <Style x:Key="ValuesDetailStyle" TargetType="StackPanel">
+        <Setter Property="Background" Value="{StaticResource SemiTransparentNotBlack}"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Margin" Value="10,0,10,50"/>
+    </Style>
+    
+</ResourceDictionary>

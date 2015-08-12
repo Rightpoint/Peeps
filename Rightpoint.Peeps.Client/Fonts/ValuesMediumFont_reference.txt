@@ -1,0 +1,9 @@
+﻿accountability		&#xe800; 
+collaboration		&#xe801;
+excellence			&#xe802;
+integrity			&#xe803;
+intrapreneurship	&#xe804;
+learning			&#xe805;
+passion				&#xe806;
+
+quote				&#xe807;

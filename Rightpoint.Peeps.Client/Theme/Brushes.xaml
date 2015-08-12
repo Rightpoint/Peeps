@@ -1,0 +1,52 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Primary -->
+    <SolidColorBrush x:Key="RpOrange" Color="#D5441C"/>
+    <SolidColorBrush x:Key="RpSteel"  Color="#a2968a"/>
+
+
+    <!-- Secondary -->
+    <SolidColorBrush x:Key="BabyBlue" Color="#50afc1"/>
+    <SolidColorBrush x:Key="NavyBlue" Color="#061091"/>
+    <SolidColorBrush x:Key="LimeGreen" Color="#c6b82f"/>
+    <SolidColorBrush x:Key="GrassGreen" Color="#647c18"/>
+    <SolidColorBrush x:Key="VioletFemme" Color="#725c7f"/>
+    <SolidColorBrush x:Key="Chocolate" Color="#875245"/>
+    <SolidColorBrush x:Key="IndigoGirl" Color="#394755"/>
+    <SolidColorBrush x:Key="NotBlack" Color="#373739"/>
+
+
+    <!-- Tertiary -->
+    <SolidColorBrush x:Key="Lemon" Color="#edc516"/>
+    <SolidColorBrush x:Key="BrickRed" Color="#a42833"/>
+    <SolidColorBrush x:Key="Pear" Color="#acbd41"/>
+    <SolidColorBrush x:Key="Grimace" Color="#754776"/>
+
+
+    <!-- Accent -->
+    <SolidColorBrush x:Key="YumaKhaki" Color="#b5b192"/>
+    <SolidColorBrush x:Key="GunmetalGray" Color="#6d6e71"/>
+    <SolidColorBrush x:Key="DarkSmoke" Color="#524948" />
+    <SolidColorBrush x:Key="MarineBlue" Color="#576f90"/>
+    <SolidColorBrush x:Key="CastIron" Color="#8f8783"/>
+
+
+    <!-- Neutrals -->
+    <SolidColorBrush x:Key="Cloudy" Color="#c1b6b3"/>
+    <SolidColorBrush x:Key="LightGray" Color="#e5e1dd"/>
+    <SolidColorBrush x:Key="LightBeige" Color="#efeae2"/>
+    <SolidColorBrush x:Key="OffWhite" Color="#f7f4f0"/>
+    <SolidColorBrush x:Key="Aluminum" Color="#f3f3f4"/>
+
+
+    <!-- Background Images-->
+    <ImageBrush x:Key="ApplicationPageBackgroundThemeBrush" ImageSource="ms-appx:///Assets/HubBackground.jpg" Stretch="UniformToFill"/>
+    <ImageBrush x:Key="DefaultBackgroundBrush" ImageSource="ms-appx:///Assets/HubBackground.jpg" Stretch="UniformToFill"/>
+    <SolidColorBrush x:Key="SemiTransparentBlack" Color="#000000" Opacity=".3"/>
+    <SolidColorBrush x:Key="SemiTransparentNotBlack" Color="#373739" Opacity=".7"/>
+    <SolidColorBrush x:Key="SemiTransparentRpOrange" Color="#D5441C" Opacity=".7"/>
+    <SolidColorBrush x:Key="SemiTransparentRpSteel" Color="#a2968a" Opacity=".7"/>
+
+</ResourceDictionary>

@@ -8,13 +8,18 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <FlipView ItemsSource="{Binding Path=Peeps, Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="400" Width="400">
+        <FlipView ItemsSource="{Binding Path=Peeps, Mode=OneWay}">
             <FlipView.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Name}"/>
-                       <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" /> 
-                    </StackPanel>
+                    <RelativePanel>
+                        <Image x:Name="peepsImage" Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}"/>
+                        <StackPanel RelativePanel.RightOf="peepsImage" Padding="15,10">
+                            <TextBlock Text="{Binding Name}" FontSize="32"/>
+                            <TextBlock Text="{Binding Office}" FontSize="32"/>
+                            <TextBlock Text="{Binding Team}" FontSize="32"/>
+                            <TextBlock Text="{Binding Hometown}" FontSize="32"/>
+                        </StackPanel>
+                    </RelativePanel>
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
