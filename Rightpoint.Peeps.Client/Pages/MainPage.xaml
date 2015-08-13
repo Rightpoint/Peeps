@@ -8,12 +8,12 @@
     mc:Ignorable="d"
     Background="{StaticResource PeepsGray}">
 
-    <Grid Background="{StaticResource DefaultBackgroundBrush}">
+    <RelativePanel Background="{StaticResource DefaultBackgroundBrush}">
 
         <Frame x:Name="PeepsFrame"
                RelativePanel.AlignHorizontalCenterWithPanel="True"
                RelativePanel.AlignVerticalCenterWithPanel="True">
-            <FlipView ItemsSource="{Binding Path=Peeps, Mode=OneWay}" Background="{StaticResource SemiTransparentNotBlack}">
+            <FlipView ItemsSource="{Binding Path=Peeps.Collection, Mode=OneWay}" Background="{StaticResource SemiTransparentNotBlack}">
                 <FlipView.ItemTemplate>
                     <DataTemplate>
                         <RelativePanel>
@@ -29,16 +29,16 @@
                                 </TextBlock>
                                 <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Hometown}"/>
                             </StackPanel>
-                            <Grid Padding="10"
-                                  RelativePanel.AlignBottomWithPanel="True"
-                                  RelativePanel.AlignRightWithPanel="True">
-                                <Image Source="../Assets/peeps_stamp.png" Height="40" Width="40"/>
-                            </Grid>
                         </RelativePanel>
                     </DataTemplate>
                 </FlipView.ItemTemplate>
             </FlipView>
         </Frame>
-    </Grid>
+        <Grid Padding="10"
+              RelativePanel.AlignBottomWithPanel="True"
+              RelativePanel.AlignRightWithPanel="True">
+            <Image Source="../Assets/peeps_stamp.png" Height="40" Width="40"/>
+        </Grid>
+    </RelativePanel>
 
 </pages:PageBase>
