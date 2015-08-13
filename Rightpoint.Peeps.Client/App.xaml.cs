@@ -6,7 +6,6 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Rightpoint.Peeps.Client.DI;
-using Rightpoint.Peeps.Client.Infrastructure;
 using Rightpoint.Peeps.Client.Pages;
 
 namespace Rightpoint.Peeps.Client
@@ -22,6 +21,10 @@ namespace Rightpoint.Peeps.Client
         /// </summary>
         public App()
         {
+            ////Microsoft.ApplicationInsights.WindowsAppInitializer.InitializeAsync(
+            ////    Microsoft.ApplicationInsights.WindowsCollectors.Metadata |
+            ////    Microsoft.ApplicationInsights.WindowsCollectors.Session);
+
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
