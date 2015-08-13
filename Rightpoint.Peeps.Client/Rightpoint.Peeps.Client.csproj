@@ -115,6 +115,7 @@
     <Compile Include="DI\UnityContainerFactory.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Infrastructure\PeepsMobileServiceClient.cs" />
+    <Compile Include="Models\DynamicCollection.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\Peep.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
@@ -171,6 +172,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

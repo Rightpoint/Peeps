@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Reflection;
-using Windows.UI.Notifications;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.Practices.ServiceLocation;
-using Microsoft.Practices.Unity;
 using Rightpoint.Peeps.Client.ViewModels;
 
 namespace Rightpoint.Peeps.Client.Pages
@@ -13,6 +11,9 @@ namespace Rightpoint.Peeps.Client.Pages
     {
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            this.Unloaded -= PageBase_Unloaded;
+            this.Unloaded += PageBase_Unloaded;
+
             string assemblyName = this.GetType().GetTypeInfo().Assembly.GetName().Name;
 
             string fullName = $"{assemblyName}.ViewModels.{e.SourcePageType.Name.Replace("Page", "ViewModel")}";
@@ -24,6 +25,12 @@ namespace Rightpoint.Peeps.Client.Pages
             this.DataContext = viewModel;
 
             base.OnNavigatedTo(e);
+        }
+
+        private void PageBase_Unloaded(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            ViewModelBase viewModel = (ViewModelBase)this.DataContext;
+            viewModel.Cleanup();
         }
     }
 }

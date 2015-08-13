@@ -1,9 +1,11 @@
 ﻿using System;
-using System.Collections.ObjectModel;
 using Windows.UI.Xaml.Navigation;
 using GalaSoft.MvvmLight.Views;
 using Microsoft.WindowsAzure.MobileServices;
 using Rightpoint.Peeps.Client.Models;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Rightpoint.Peeps.Client.ViewModels
 {
@@ -11,29 +13,28 @@ namespace Rightpoint.Peeps.Client.ViewModels
     {
         private readonly IMobileServiceClient _mobileServiceClient;
 
-        public ObservableCollection<Peep> Peeps { get; set; } = new ObservableCollection<Peep>();
+        public DynamicCollection<Peep> Peeps { get; set; } = new DynamicCollection<Peep>();
 
         public MainViewModel(NavigationService navigationService, IMobileServiceClient mobileServiceClient) : base(navigationService)
         {
             if (mobileServiceClient == null) throw new ArgumentNullException(nameof(mobileServiceClient));
-
             this._mobileServiceClient = mobileServiceClient;
         }
 
-        public override async void OnNavigatedTo(NavigationEventArgs e)
+        protected override async Task LoadData(NavigationEventArgs e)
         {
-            // load logic (note that "e" contains Parameter)
+            IMobileServiceTable<Peep> peepsTable = this._mobileServiceClient.GetTable<Peep>();
 
-            IMobileServiceTable<Peep> peeps = this._mobileServiceClient.GetTable<Peep>();
+            List<Peep> peeps = (await peepsTable.ReadAsync()).ToList();
 
-            var peepsList = await peeps.ToCollectionAsync();
+            this.Peeps.Initialize(peeps);
+        }
 
-            foreach (var p in peepsList)
-            {
-                this.Peeps.Add(p);
-            }
+        public override void Cleanup()
+        {
+            this.Peeps.Cleanup();
 
-            base.OnNavigatedTo(e);
+            base.Cleanup();
         }
     }
 }
