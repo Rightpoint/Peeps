@@ -9,6 +9,11 @@
     <Application.Resources>
         <ResourceDictionary>
             <converters:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Theme/Base.xaml"/>
+                <ResourceDictionary Source="/Theme/Brushes.xaml"/>
+                <ResourceDictionary Source="/Theme/Fonts.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
     

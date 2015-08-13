@@ -93,6 +93,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Assets\BadgeLogo.scale-200.png" />
+    <Content Include="Assets\peeps_stamp.png" />
+    <Content Include="Assets\people_splash.png" />
     <Content Include="Fonts\DIN.otf" />
     <Content Include="Fonts\DINPro-Bold.otf" />
     <Content Include="Fonts\DINPro-Medium.otf" />

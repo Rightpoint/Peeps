@@ -3,10 +3,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
     xmlns:converter="using:Rightpoint.WowWall.Client.App.Converters">
 
-    <!-- Converters -->
-    <converter:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter" />
-    <converter:ToUpperCaseConverter x:Key="ToUpperCaseConverter" />
-
     <ItemsPanelTemplate x:Key="FlipView_Vertical">
         <VirtualizingStackPanel Orientation="Vertical"/>
     </ItemsPanelTemplate>

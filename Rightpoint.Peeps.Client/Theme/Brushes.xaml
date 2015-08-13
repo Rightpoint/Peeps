@@ -31,6 +31,7 @@
     <SolidColorBrush x:Key="DarkSmoke" Color="#524948" />
     <SolidColorBrush x:Key="MarineBlue" Color="#576f90"/>
     <SolidColorBrush x:Key="CastIron" Color="#8f8783"/>
+    <SolidColorBrush x:Key="PeepsGray" Color="#414042"/>
 
 
     <!-- Neutrals -->
@@ -42,8 +43,8 @@
 
 
     <!-- Background Images-->
-    <ImageBrush x:Key="ApplicationPageBackgroundThemeBrush" ImageSource="ms-appx:///Assets/HubBackground.jpg" Stretch="UniformToFill"/>
-    <ImageBrush x:Key="DefaultBackgroundBrush" ImageSource="ms-appx:///Assets/HubBackground.jpg" Stretch="UniformToFill"/>
+    <ImageBrush x:Key="ApplicationPageBackgroundThemeBrush" ImageSource="ms-appx:///Assets/people_splash.png" Stretch="UniformToFill"/>
+    <ImageBrush x:Key="DefaultBackgroundBrush" ImageSource="ms-appx:///Assets/people_splash.png" Stretch="UniformToFill"/>
     <SolidColorBrush x:Key="SemiTransparentBlack" Color="#000000" Opacity=".3"/>
     <SolidColorBrush x:Key="SemiTransparentNotBlack" Color="#373739" Opacity=".7"/>
     <SolidColorBrush x:Key="SemiTransparentRpOrange" Color="#D5441C" Opacity=".7"/>
