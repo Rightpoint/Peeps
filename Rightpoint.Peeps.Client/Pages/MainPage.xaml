@@ -34,8 +34,10 @@
         <Frame x:Name="PeepsFrame"
                RelativePanel.AlignHorizontalCenterWithPanel="True"
                RelativePanel.AlignVerticalCenterWithPanel="True">
-            <FlipView ItemsSource="{Binding Path=Peeps.Collection, Mode=OneWay}" Background="{StaticResource SemiTransparentNotBlack}" ItemTemplate="{StaticResource PeepsTemplate}">
-            </FlipView>
+            <FlipView ItemsSource="{Binding Path=Peeps.Collection, Mode=OneWay}" Background="{StaticResource SemiTransparentNotBlack}" 
+                      ItemTemplate="{StaticResource PeepsTemplate}" 
+                      SelectedItem="{Binding Path=Peeps.CurrentItem, Mode=TwoWay}" 
+                      SelectedIndex="{Binding Path=Peeps.CurrentIndex, Mode=TwoWay}" />
         </Frame>
         <Grid Padding="10"
               RelativePanel.AlignBottomWithPanel="True"

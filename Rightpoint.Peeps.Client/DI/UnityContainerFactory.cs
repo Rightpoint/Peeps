@@ -59,7 +59,13 @@ namespace Rightpoint.Peeps.Client.DI
 
         private static void RegisterInfrastructure(IUnityContainer container)
         {
-            container.RegisterType<IMobileServiceClient, PeepsMobileServiceClient>(new HierarchicalLifetimeManager());
+            container.RegisterType<IMobileServiceClient, PeepsMobileServiceClient>(
+                new HierarchicalLifetimeManager(),
+                new InjectionFactory((c, t, s) =>
+                {
+                    // Find more information in the readme in the solution items folder
+                    return new PeepsMobileServiceClient("applicationUrl", "applicationKey");
+                }));
         }
 
         private static void BootstrapServiceLocator(IUnityContainer container)
