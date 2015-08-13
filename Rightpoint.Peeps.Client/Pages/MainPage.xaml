@@ -8,30 +8,33 @@
     mc:Ignorable="d"
     Background="{StaticResource PeepsGray}">
 
+    <!-- Templates -->
+    <Page.Resources>
+        <DataTemplate x:Key="PeepsTemplate">
+            <RelativePanel>
+                <Image x:Name="PeepsImage" Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}"/>
+                <StackPanel x:Name="PeepsText"
+                            Padding="15,10"
+                            RelativePanel.RightOf="{Binding ElementName=PeepsImage}" 
+                            RelativePanel.AlignVerticalCenterWithPanel="True">
+                    <TextBlock  Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
+                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}">
+                        <Run Text="{Binding Office}"/>
+                        <Run Text="{Binding Team}"/>
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Hometown}"/>
+                </StackPanel>
+            </RelativePanel>
+        </DataTemplate>
+    </Page.Resources>
+
+    <!-- The Goods -->
     <RelativePanel Background="{StaticResource DefaultBackgroundBrush}">
 
         <Frame x:Name="PeepsFrame"
                RelativePanel.AlignHorizontalCenterWithPanel="True"
                RelativePanel.AlignVerticalCenterWithPanel="True">
-            <FlipView ItemsSource="{Binding Path=Peeps.Collection, Mode=OneWay}" Background="{StaticResource SemiTransparentNotBlack}">
-                <FlipView.ItemTemplate>
-                    <DataTemplate>
-                        <RelativePanel>
-                            <Image x:Name="PeepsImage" Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}"/>
-                            <StackPanel x:Name="PeepsText"
-                                        Padding="15,10"
-                                        RelativePanel.RightOf="PeepsImage" 
-                                        RelativePanel.AlignVerticalCenterWithPanel="True">
-                                <TextBlock  Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
-                                <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}">
-                                    <Run Text="{Binding Office}"/>
-                                    <Run Text="{Binding Team}"/>
-                                </TextBlock>
-                                <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Hometown}"/>
-                            </StackPanel>
-                        </RelativePanel>
-                    </DataTemplate>
-                </FlipView.ItemTemplate>
+            <FlipView ItemsSource="{Binding Path=Peeps.Collection, Mode=OneWay}" Background="{StaticResource SemiTransparentNotBlack}" ItemTemplate="{StaticResource PeepsTemplate}">
             </FlipView>
         </Frame>
         <Grid Padding="10"
