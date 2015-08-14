@@ -43,7 +43,7 @@
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
 
-                <!-- Wide state applies in devices >=720 effective pixels wide -->
+                <!-- Wide state applies in devices above 720 effective pixels wide -->
                 <VisualState x:Name="WideState">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="720" />
@@ -53,15 +53,16 @@
                         <Setter Target="PeepsFrame.Background" Value="{StaticResource DefaultBackgroundBrush}" />
                         <Setter Target="LayoutRoot.Background" Value="{StaticResource PeepsGray}" />
                         <Setter Target="PeepsPanel.Orientation" Value="Horizontal" />
-
                         <Setter Target="PeepsFlipView.ItemTemplate" Value="{StaticResource PeepsTemplateWide}"/>
+
+
                         <Setter Target="PeepsStamp.(RelativePanel.AlignBottomWithPanel)" Value="True"/>
                         <Setter Target="PeepsStamp.(RelativePanel.AlignRightWithPanel)" Value="True"/>
                         
                     </VisualState.Setters>
                 </VisualState>
 
-                <!-- Wide state applies in devices <=719 effective pixels wide -->
+                <!-- Wide state applies in devices less than 719 effective pixels wide -->
                 <VisualState x:Name="NarrowState">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0" />
@@ -71,6 +72,8 @@
                         <Setter Target="LayoutRoot.Background" Value="{StaticResource DefaultBackgroundBrush}" />
                         <Setter Target="PeepsFrame.Background" Value="Transparent" />
                         <Setter Target="PeepsFlipView.ItemTemplate" Value="{StaticResource PeepsTemplateNarrow}"/>
+
+                        <Setter Target="PeepsStamp.(RelativePanel.AlignTopWith)" Value="PeepsFrame"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -81,16 +84,16 @@
         <RelativePanel>
 
             <Frame x:Name="PeepsFrame" Style="{StaticResource FramePeeps}"
-                   RelativePanel.AlignHorizontalCenterWithPanel="True"
-                   RelativePanel.AlignVerticalCenterWithPanel="True">
+                   RelativePanel.AlignVerticalCenterWithPanel="True"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True">
 
-                <FlipView x:Name="PeepsFlipView" 
+                <FlipView x:Name="PeepsFlipView"
                           ItemsSource="{Binding Path=Peeps.Collection, Mode=OneWay}"                          
                           SelectedItem="{Binding Path=Peeps.CurrentItem, Mode=TwoWay}" 
                           SelectedIndex="{Binding Path=Peeps.CurrentIndex, Mode=TwoWay}" />
             </Frame>
 
-            <Grid x:Name="PeepsStamp" Padding="10">
+            <Grid x:Name="PeepsStamp" Padding="10" >
                 <Image Source="../Assets/peeps_stamp.png" Height="140" Width="140"/>
             </Grid>
 
