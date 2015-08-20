@@ -52,7 +52,7 @@
                     <VisualState.Setters>
                         <Setter Target="PeepsFrame.Background" Value="{StaticResource DefaultBackgroundBrush}" />
                         <Setter Target="LayoutRoot.Background" Value="{StaticResource PeepsGray}" />
-                        <Setter Target="PeepsPanel.Orientation" Value="Horizontal" />
+                        <!--<Setter Target="PeepsPanel.Orientation" Value="Horizontal" />-->
                         <Setter Target="PeepsFlipView.ItemTemplate" Value="{StaticResource PeepsTemplateWide}"/>
 
 
