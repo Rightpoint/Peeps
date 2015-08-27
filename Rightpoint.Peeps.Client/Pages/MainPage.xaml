@@ -5,18 +5,14 @@
     xmlns:pages="using:Rightpoint.Peeps.Client.Pages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{StaticResource PeepsGray}">
+    mc:Ignorable="d">
 
     <!-- Templates -->
     <Page.Resources>
-        <DataTemplate x:Key="PeepsTemplate">
-            <RelativePanel>
-                <Image x:Name="PeepsImage" Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}"/>
-                <StackPanel x:Name="PeepsText"
-                            Padding="15,10"
-                            RelativePanel.RightOf="{Binding ElementName=PeepsImage}" 
-                            RelativePanel.AlignVerticalCenterWithPanel="True">
+        <DataTemplate x:Key="PeepsTemplateWide">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="None" HorizontalAlignment="Left"/>
+                <StackPanel Padding="15,10" VerticalAlignment="Center">
                     <TextBlock  Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}">
                         <Run Text="{Binding Office}"/>
@@ -24,26 +20,83 @@
                     </TextBlock>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Hometown}"/>
                 </StackPanel>
-            </RelativePanel>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="PeepsTemplateNarrow">
+            <Grid>
+                <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <StackPanel Padding="15,10" VerticalAlignment="Bottom" Background="{StaticResource SemiTransparentBlack}">
+                    <TextBlock  Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
+                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}">
+                        <Run Text="{Binding Office}"/>
+                        <Run Text="{Binding Team}"/>
+                    </TextBlock>
+                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Hometown}"/>
+                </StackPanel>
+            </Grid>
         </DataTemplate>
     </Page.Resources>
 
     <!-- The Goods -->
-    <RelativePanel Background="{StaticResource DefaultBackgroundBrush}">
+    <Grid x:Name="LayoutRoot">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
 
-        <Frame x:Name="PeepsFrame"
-               RelativePanel.AlignHorizontalCenterWithPanel="True"
-               RelativePanel.AlignVerticalCenterWithPanel="True">
-            <FlipView ItemsSource="{Binding Path=Peeps.Collection, Mode=OneWay}" Background="{StaticResource SemiTransparentNotBlack}" 
-                      ItemTemplate="{StaticResource PeepsTemplate}" 
-                      SelectedItem="{Binding Path=Peeps.CurrentItem, Mode=TwoWay}" 
-                      SelectedIndex="{Binding Path=Peeps.CurrentIndex, Mode=TwoWay}" />
-        </Frame>
-        <Grid Padding="10"
-              RelativePanel.AlignBottomWithPanel="True"
-              RelativePanel.AlignRightWithPanel="True">
-            <Image Source="../Assets/peeps_stamp.png" Height="40" Width="40"/>
-        </Grid>
-    </RelativePanel>
+                <!-- Wide state applies in devices above 720 effective pixels wide -->
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
 
+                    <VisualState.Setters>
+                        <Setter Target="PeepsFrame.Background" Value="{StaticResource DefaultBackgroundBrush}" />
+                        <Setter Target="LayoutRoot.Background" Value="{StaticResource PeepsGray}" />
+                        <!--<Setter Target="PeepsPanel.Orientation" Value="Horizontal" />-->
+                        <Setter Target="PeepsFlipView.ItemTemplate" Value="{StaticResource PeepsTemplateWide}"/>
+
+
+                        <Setter Target="PeepsStamp.(RelativePanel.AlignBottomWithPanel)" Value="True"/>
+                        <Setter Target="PeepsStamp.(RelativePanel.AlignRightWithPanel)" Value="True"/>
+                        
+                    </VisualState.Setters>
+                </VisualState>
+
+                <!-- Wide state applies in devices less than 719 effective pixels wide -->
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter Target="LayoutRoot.Background" Value="{StaticResource DefaultBackgroundBrush}" />
+                        <Setter Target="PeepsFrame.Background" Value="Transparent" />
+                        <Setter Target="PeepsFlipView.ItemTemplate" Value="{StaticResource PeepsTemplateNarrow}"/>
+
+                        <Setter Target="PeepsStamp.(RelativePanel.AlignTopWith)" Value="PeepsFrame"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+
+        <RelativePanel>
+
+            <Frame x:Name="PeepsFrame" Style="{StaticResource FramePeeps}"
+                   RelativePanel.AlignVerticalCenterWithPanel="True"
+                   RelativePanel.AlignHorizontalCenterWithPanel="True">
+
+                <FlipView x:Name="PeepsFlipView"
+                          ItemsSource="{Binding Path=Peeps.Collection, Mode=OneWay}"                          
+                          SelectedItem="{Binding Path=Peeps.CurrentItem, Mode=TwoWay}" 
+                          SelectedIndex="{Binding Path=Peeps.CurrentIndex, Mode=TwoWay}" />
+            </Frame>
+
+            <Grid x:Name="PeepsStamp" Padding="10" >
+                <Image Source="../Assets/peeps_stamp.png" Height="140" Width="140"/>
+            </Grid>
+
+        </RelativePanel>
+    </Grid>
 </pages:PageBase>

@@ -10,15 +10,12 @@
         <Setter Property="Foreground" Value="#f7f4f0"/>
     </Style>
 
-    <Style TargetType="Frame">
-        <Setter Property="MaxHeight" Value="400"/>
-        <Setter Property="MaxWidth" Value="1020"/>
-        <Setter Property="BorderThickness" Value="4"/>
-        <Setter Property="BorderBrush" Value="{StaticResource OffWhite}"/>
-    </Style>
-    
     <Style TargetType="RelativePanel">
         <Setter Property="Background" Value="Transparent"/>
+    </Style>
+    
+    <Style TargetType="FlipView">
+        <Setter Property="Background" Value="{StaticResource SemiTransparentNotBlack}"/>
     </Style>
 
 
@@ -31,6 +28,13 @@
     <Style x:Key="Subheading" TargetType="TextBlock">
         <Setter Property="FontSize" Value="24" />
         <Setter Property="FontFamily" Value="ms-appx:///Fonts/KulturistaMedium.otf#Kulturista"/>
+    </Style>
+
+    <Style x:Key="FramePeeps" TargetType="Frame">
+        <Setter Property="MaxHeight" Value="400"/>
+        <Setter Property="MaxWidth" Value="1020"/>
+        <Setter Property="BorderThickness" Value="4"/>
+        <Setter Property="BorderBrush" Value="{StaticResource OffWhite}"/>
     </Style>
 
 </ResourceDictionary>
