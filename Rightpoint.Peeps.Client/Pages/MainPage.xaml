@@ -82,6 +82,10 @@
 
 
         <RelativePanel>
+            <StackPanel x:Name="PeepsTime" DataContext="{Binding DigitalClock}" Padding="10,15">
+                <TextBlock Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding TimeFormatted}" HorizontalAlignment="Center"/>
+                <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding DateFormatted}" HorizontalAlignment="Center"/>
+            </StackPanel>
 
             <Frame x:Name="PeepsFrame" Style="{StaticResource FramePeeps}"
                    RelativePanel.AlignVerticalCenterWithPanel="True"

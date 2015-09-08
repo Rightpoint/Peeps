@@ -116,6 +116,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BasicDigitalClock.cs" />
     <Compile Include="Converters\ByteArrayToImageConverter.cs" />
     <Compile Include="DI\UnityContainerFactory.cs" />
     <Compile Include="Extensions.cs" />
@@ -127,6 +128,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageBase.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
