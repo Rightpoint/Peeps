@@ -22,46 +22,142 @@ namespace Rightpoint.Peeps.Sync
             {
                 new Peep
                 {
-                    Name = "Nick Groos",
-                    Hometown = "Grand Rapids, MI",
-                    Team = "App Dev",
+                    Name = "Ali Quadri",
+                    Hometown = "Chicago, IL",
+                    Team = "UX",
                     Office = "Chicago",
-                    ImagePath = @"c:\temp\people\NickGroos.jpg"
+                    ImagePath = @"c:\temp\people\AliQuadri.jpg"
                 },
                 new Peep
                 {
-                    Name = "Dev Deol",
-                    Hometown = "Arlington Heights, IL",
-                    Team = "App Dev",
+                    Name = "Gina Lee",
+                    Hometown = "Schaumburg, IL",
+                    Team = "Creative",
                     Office = "Chicago",
-                    ImagePath = @"c:\temp\people\DevDeol.jpg"
+                    ImagePath = @"c:\temp\people\GinaLee.jpg"
                 },
                 new Peep
                 {
-                    Name = "Steve Mierop",
-                    Hometown = "La Grange, IL",
-                    Team = "App Dev",
+                    Name = "Dan Costanzo",
+                    Hometown = "Berkeley Heights, NJ",
+                    Team = "BD",
                     Office = "Chicago",
-                    ImagePath = @"c:\temp\people\SteveMierop.jpg"
+                    ImagePath = @"c:\temp\people\DanCostanzo.jpg"
                 },
                 new Peep
                 {
-                    Name = "Alex Zebrov",
-                    Hometown = "Narva, Estonia",
+                    Name = "Krystal Blesi",
+                    Hometown = "Minnesota",
+                    Team = "Salesforce",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\KrystalBlesi.jpg"
+                },
+                new Peep
+                {
+                    Name = "Austin Smith",
+                    Hometown = "Deerfield, IL",
+                    Team = "Creative",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\AustinSmith.jpg"
+                },
+                new Peep
+                {
+                    Name = "Tim Alvis",
+                    Hometown = "Chicago, IL",
+                    Team = "Ops",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\TimAlvis.jpg"
+                },
+                new Peep
+                {
+                    Name = "Tom Keuten",
+                    Hometown = "Detroit, MI",
+                    Team = "BD",
+                    Office = "Novi",
+                    ImagePath = @"c:\temp\people\TomKeuten.jpg"
+                },
+                new Peep
+                {
+                    Name = "Rob Mayer",
+                    Hometown = "Chicago, IL",
+                    Team = "Ops",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\RobMayer.jpg"
+                },
+                new Peep
+                {
+                    Name = "Leslie Lockett",
+                    Hometown = "Canton, MI",
+                    Team = "Delivery Support",
+                    Office = "Novi",
+                    ImagePath = @"c:\temp\people\LeslieLockett.jpg"
+                },
+                new Peep
+                {
+                    Name = "Syed Belgam",
+                    Hometown = "Hydrabad, India",
                     Team = "Managed Services",
                     Office = "Chicago",
-                    ImagePath = @"c:\temp\people\AlexZebrov.jpg"
+                    ImagePath = @"c:\temp\people\SyedBelgam.jpg"
                 },
-                new Peep
+                 new Peep
                 {
-                    Name = "Bartel Welch",
-                    Hometown = "Detroit, MI",
+                    Name = "Barbara Kubas",
+                    Hometown = "Krakow, Poland",
                     Team = "App Dev",
-                    Office = "Detroit",
-                    ImagePath = @"c:\temp\people\BartelWelch.jpg"
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\BarbaraKubas.jpg"
+                },
+                 new Peep
+                {
+                    Name = "Jay Mueller",
+                    Hometown = "McHenry, IL",
+                    Team = "Ops",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\JayMueller.jpg"
+                },
+                 new Peep
+                {
+                    Name = "Gautam Jaiswal",
+                    Hometown = "Chicago, IL",
+                    Team = "App Dev",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\GautamJaiswal.jpg"
+                },
+                 new Peep
+                {
+                    Name = "Steve Dykstra",
+                    Hometown = "Northville, MI",
+                    Team = "PMO",
+                    Office = "Novi",
+                    ImagePath = @"c:\temp\people\SteveDykstra.jpg"
+                },
+                 new Peep
+                {
+                    Name = "Carlee Wolfe",
+                    Hometown = "Arlington Heights, IL",
+                    Team = "Change Management",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\CarleeWolfe.jpg"
+                },
+                 new Peep
+                {
+                    Name = "Jimmy Hopton",
+                    Hometown = "Basildon, UK",
+                    Team = "Creative",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\JimmyHopton.jpg"
+                },
+                 new Peep
+                {
+                    Name = "Laurel Petty",
+                    Hometown = "Sevierville, TN",
+                    Team = "Creative",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\LaurelPetty.jpg"
                 }
             };
-            
+
             foreach (Peep peep in peeps)
             {
                 peep.ImageBytes = ImagePathToByteArray(peep.ImagePath);
@@ -76,7 +172,7 @@ namespace Rightpoint.Peeps.Sync
                     peep.CreatedAt = DateTime.UtcNow;
                     peep.UpdatedAt = DateTime.UtcNow;
                     peep.Deleted = false;
-                    
+
                     DbContext.Peeps.Add(peep);
 
                     Console.WriteLine($"Adding {peep.Name}");
