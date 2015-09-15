@@ -58,6 +58,8 @@
 
                         <Setter Target="PeepsStamp.(RelativePanel.AlignBottomWithPanel)" Value="True"/>
                         <Setter Target="PeepsStamp.(RelativePanel.AlignRightWithPanel)" Value="True"/>
+
+                        <Setter Target="PeepsTime.(RelativePanel.AlignVerticalCenterWith)" Value="PeepsStamp"/>
                         
                     </VisualState.Setters>
                 </VisualState>
@@ -74,6 +76,9 @@
                         <Setter Target="PeepsFlipView.ItemTemplate" Value="{StaticResource PeepsTemplateNarrow}"/>
 
                         <Setter Target="PeepsStamp.(RelativePanel.AlignTopWith)" Value="PeepsFrame"/>
+
+                        <Setter Target="PeepsTime.(RelativePanel.AlignHorizontalCenterWithPanel)" Value="True"/>
+                        <Setter Target="PeepsTime.(RelativePanel.AlignBottomWithPanel)" Value="True"/>
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
