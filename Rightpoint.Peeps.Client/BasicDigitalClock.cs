@@ -31,7 +31,7 @@ namespace Rightpoint.Peeps.Client
             get
             {
                 UpdateCurrentTime();
-                DateTime now = new DateTime().AddTicks(currentTime);
+                DateTime now = new DateTime().AddTicks(currentTime).ToLocalTime();
                 string strDate = now.ToString("D");
                 return strDate;
             }
@@ -41,7 +41,7 @@ namespace Rightpoint.Peeps.Client
             get
             {
                 UpdateCurrentTime();
-                DateTime now = new DateTime().AddTicks(currentTime);
+                DateTime now = new DateTime().AddTicks(currentTime).ToLocalTime();
                 string strTime = now.ToString("t");
                 return strTime;
             }

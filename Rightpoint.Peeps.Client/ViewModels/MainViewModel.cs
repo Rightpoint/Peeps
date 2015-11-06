@@ -50,6 +50,8 @@ namespace Rightpoint.Peeps.Client.ViewModels
 
         protected override async Task LoadData(NavigationEventArgs e)
         {
+            this.Peeps.Collection.Add(new Peep());
+
             IMobileServiceTable<Peep> peepsTable = this._mobileServiceClient.GetTable<Peep>();
 
             List<Peep> peeps = (await peepsTable.ReadAsync()).ToList();

@@ -77,8 +77,11 @@
 
                         <Setter Target="PeepsStamp.(RelativePanel.AlignTopWith)" Value="PeepsFrame"/>
 
+                        <Setter Target="PeepsTime.Visibility" Value="Collapsed"/>
+                        <!--
                         <Setter Target="PeepsTime.(RelativePanel.AlignHorizontalCenterWithPanel)" Value="True"/>
                         <Setter Target="PeepsTime.(RelativePanel.AlignBottomWithPanel)" Value="True"/>
+                        -->
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -92,7 +95,8 @@
                 <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding DateFormatted}" HorizontalAlignment="Center"/>
             </StackPanel>
 
-            <Frame x:Name="PeepsFrame" Style="{StaticResource FramePeeps}"
+            <Frame x:Name="PeepsFrame" 
+                   Style="{StaticResource FramePeeps}"
                    RelativePanel.AlignVerticalCenterWithPanel="True"
                    RelativePanel.AlignHorizontalCenterWithPanel="True">
 
