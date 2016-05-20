@@ -11,7 +11,5 @@
         public string Office { get; set; }
 
         public byte[] ImageBytes { get; set; }
-
-
     }
 }

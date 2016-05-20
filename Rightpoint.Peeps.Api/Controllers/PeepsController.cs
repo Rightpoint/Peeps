@@ -1,5 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Web;
+using System.Web.Configuration;
 using System.Web.Http;
+using Newtonsoft.Json;
+using Rightpoint.Peeps.Api.Models;
 
 namespace Rightpoint.Peeps.Api.Controllers
 {
@@ -10,9 +16,17 @@ namespace Rightpoint.Peeps.Api.Controllers
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public IEnumerable<string> Get(string[] args)
+        public HttpResponseMessage Get([FromUri]string args)
         {
-            return new string[] { "value1", "value2" };
+            var appData = HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data");
+            string file = Path.Combine(appData, Constants.PeepsFile);
+
+            using (var sr = new StreamReader(file))
+            {
+                var result = JsonConvert.DeserializeObject<Company>(sr.ReadToEnd());
+
+                return Request.CreateResponse(HttpStatusCode.OK, result);
+            }
         }
 
         /// <summary>
@@ -21,8 +35,8 @@ namespace Rightpoint.Peeps.Api.Controllers
         /// <returns></returns>
         [Route("api/peeps/config")]
         public string Get()
-        {
-            return "value";
+        {            
+            return WebConfigurationManager.AppSettings["PeepsQuery"];
         }
     }
 }
