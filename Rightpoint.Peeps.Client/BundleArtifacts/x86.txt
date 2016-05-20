@@ -1,0 +1,2 @@
+MainPackage=C:\_GIT\Peeps\Rightpoint.Peeps.Client\bin\x86\Debug\Rightpoint.Peeps.Client_1.0.3.0_x86_Debug.appx
+SymbolPackage=C:\Users\jmeyer\Downloads\Peeps\Rightpoint.Peeps.Client_1.0.3.0_Debug_Test\Rightpoint.Peeps.Client_1.0.3.0_x86_Debug.appxsym

@@ -18,80 +18,51 @@ namespace Rightpoint.Peeps.Sync
         {
             var currentPeeps = DbContext.Peeps.AsEnumerable().ToList();
 
+            //TODO: we are abusing peeps by injecting events... a second model or refactor may be prudent
             List<Peep> peeps = new List<Peep>
             {
+                //new Peep
+                //{
+                //    Name = "Event_20160423",
+                //    Hometown ="Event_20160423",
+                //    Team ="Event_20160423",
+                //    Office ="Event_20160423",
+                //    ImagePath = @"c:\temp\people\FeedStarvingChildren-11.jpg"
+                //},
                 new Peep
                 {
-                    Name = "Jesse Wilbur",
+                    Name = "Nerijus Baniukevicius",
+                    Hometown = "Klaipeda, Lithuania",
+                    Team = "App Dev",
+                    Office = "Chicago",
+                    ImagePath = @"c:\temp\people\NerijusBaniukevicius.jpg"
+                },
+                new Peep
+                {
+                    Name = "Laraib Jafri",
                     Hometown = "Chicago, IL",
-                    Team = "Agency",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\JesseWilbur.jpg"
+                    Team = "Chicago",
+                    Office = "Salesforce",
+                    ImagePath = @"c:\temp\people\LaraibJafri.jpg"
                 },
                 new Peep
                 {
-                    Name = "Josh Chung",
-                    Hometown = "Seoul, Korea",
-                    Team = "BI",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\JoshChung.jpeg"
+                    Name = "Gabe Streza.jpg",
+                    Hometown = "Addison, IL",
+                    Team = "Chicago",
+                    Office = "Managed Services",
+                    ImagePath = @"c:\temp\people\GabeStreza.jpg"
                 },
+                /*
                 new Peep
                 {
-                    Name = "Eli Albert",
-                    Hometown = "Teaneck, NJ",
-                    Team = "App Dev",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\EliAlbert.jpeg"
+                    Name = "",
+                    Hometown = "",
+                    Team = "",
+                    Office = "",
+                    ImagePath = @"c:\temp\people\"
                 },
-                new Peep
-                {
-                    Name = "Nicole Lambiase",
-                    Hometown = "West Palm Beach, FL",
-                    Team = "Managed Services",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\NicoleLambiase.jpg"
-                },
-                new Peep
-                {
-                    Name = "Addam Wassel",
-                    Hometown = "Northville, MI",
-                    Team = "App Dev",
-                    Office = "Michigan",
-                    ImagePath = @"c:\temp\people\AddamWassel.jpg"
-                },
-                new Peep
-                {
-                    Name = "Robin Schaffer",
-                    Hometown = "Denver, CO",
-                    Team = "Denver",
-                    Office = "Denver",
-                    ImagePath = @"c:\temp\people\Robin.jpg"
-                },
-                new Peep
-                {
-                    Name = "Allie Gauthier",
-                    Hometown = "Coopersville, MI",
-                    Team = "Delivery Support",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\AllieGauthier.jpg"
-                },
-                new Peep
-                {
-                    Name = "Jason McDermott",
-                    Hometown = "Erie, PA",
-                    Team = "App Dev",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\JasonMcDermott.jpg"
-                },
-                new Peep
-                {
-                    Name = "Kimberly Arakelian",
-                    Hometown = "Lansing, MI",
-                    Team = "Content Strategy",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\KimberlyArakelian.jpg"
-                },
+                */
             };
 
             foreach (Peep peep in peeps)

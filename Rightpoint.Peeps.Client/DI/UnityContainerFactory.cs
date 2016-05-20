@@ -64,7 +64,7 @@ namespace Rightpoint.Peeps.Client.DI
                 new InjectionFactory((c, t, s) =>
                 {
                     // Find more information in the readme in the solution items folder
-                    return new PeepsMobileServiceClient("applicationUrl", "applicationKey");
+                    return new PeepsMobileServiceClient("https://rp-peeps-prod.azure-mobile.net/", "aoJINuiAQbbrWmwDcNjdQOzxoWhxPi81");
                 }));
         }
 
