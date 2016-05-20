@@ -6,11 +6,8 @@ using Rightpoint.Peeps.Client.Models;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Dynamic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using Windows.UI.Xaml;
-using GalaSoft.MvvmLight;
 
 namespace Rightpoint.Peeps.Client.ViewModels
 {
@@ -46,12 +43,17 @@ namespace Rightpoint.Peeps.Client.ViewModels
             dispatcherTimer.Tick += dispatcherTimer_Tick;
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 100);
             dispatcherTimer.Start();
+
+            //TODO: load data on timer
         }
 
         protected override async Task LoadData(NavigationEventArgs e)
         {
             this.Peeps.Collection.Add(new Peep());
 
+            //TODO: call config endpoint to get today's query parameters
+
+            //TODO: replace call to table with call to api
             IMobileServiceTable<Peep> peepsTable = this._mobileServiceClient.GetTable<Peep>();
 
             List<Peep> peeps = (await peepsTable.ReadAsync()).ToList();

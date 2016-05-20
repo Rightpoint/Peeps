@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{33C11C7A-427A-481C-A386-CED26F5A79C1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rightpoint.Peeps.Api</RootNamespace>
+    <AssemblyName>Rightpoint.Peeps.Api</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PeepsController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\Aaron Starkston.JPG" />
+    <Content Include="Content\Images\Abhinay Jain.jpg" />
+    <Content Include="Content\Images\Addam Wassel.jpg" />
+    <Content Include="Content\Images\Aditya Mehra.JPG" />
+    <Content Include="Content\Images\Adrian Widjaja.jpg" />
+    <Content Include="Content\Images\Aja Shamblee.JPG" />
+    <Content Include="Content\Images\Alex Swarthout.JPG" />
+    <Content Include="Content\Images\Alex Zebrov.jpg" />
+    <Content Include="Content\Images\Ali Quadri.jpg" />
+    <Content Include="Content\Images\Allie Gauthier.jpg" />
+    <Content Include="Content\Images\Allison Baniecki.jpg" />
+    <Content Include="Content\Images\Allison Pitre.jpg" />
+    <Content Include="Content\Images\Amanda Thomas.JPG" />
+    <Content Include="Content\Images\Anamicak Lasser.jpg" />
+    <Content Include="Content\Images\Anastasia Severin.jpg" />
+    <Content Include="Content\Images\Andre Figueroa.jpg" />
+    <Content Include="Content\Images\Andrew Varnon.JPG" />
+    <Content Include="Content\Images\Andy Bateman.jpg" />
+    <Content Include="Content\Images\Aniket Gadre.jpg" />
+    <Content Include="Content\Images\Anna Trivino.jpg" />
+    <Content Include="Content\Images\Anne Petersen.JPG" />
+    <Content Include="Content\Images\Ariana Ross.jpg" />
+    <Content Include="Content\Images\Austin Smith.jpg" />
+    <Content Include="Content\Images\Austin Strajack.JPG" />
+    <Content Include="Content\Images\Barbara Kubas.jpg" />
+    <Content Include="Content\Images\Bartel Welch.jpg" />
+    <Content Include="Content\Images\Benjamin Sewards.jpg" />
+    <Content Include="Content\Images\Bethany Steffen.JPG" />
+    <Content Include="Content\Images\Bill Gonzalez.jpg" />
+    <Content Include="Content\Images\Brad Kramer.JPG" />
+    <Content Include="Content\Images\Brad Schneider.jpg" />
+    <Content Include="Content\Images\Brad Vesprini.JPG" />
+    <Content Include="Content\Images\Brandon Barnett.JPG" />
+    <Content Include="Content\Images\Brandon Lackey.JPG" />
+    <Content Include="Content\Images\Brandon Rozelle.jpg" />
+    <Content Include="Content\Images\Brendan Pugh.jpg" />
+    <Content Include="Content\Images\Brennen Cage.jpg" />
+    <Content Include="Content\Images\Brian Bennewitz.gif" />
+    <Content Include="Content\Images\Brian Bennewitz.jpg" />
+    <Content Include="Content\Images\Brian Hulse.JPG" />
+    <Content Include="Content\Images\Bryan Bruno.jpg" />
+    <Content Include="Content\Images\Callie Jones.jpg" />
+    <Content Include="Content\Images\Cami Davis.jpg" />
+    <Content Include="Content\Images\Carlee Wolfe.jpg" />
+    <Content Include="Content\Images\Carolina Coviello.jpg" />
+    <Content Include="Content\Images\Cassi Pires.jpg" />
+    <Content Include="Content\Images\Catherine Renehan.jpg" />
+    <Content Include="Content\Images\Chris Crombie.jpg" />
+    <Content Include="Content\Images\Chris Daly.jpg" />
+    <Content Include="Content\Images\Chris Domino.jpg" />
+    <Content Include="Content\Images\Chris Esposito.JPG" />
+    <Content Include="Content\Images\Chris Leporini.JPG" />
+    <Content Include="Content\Images\Chris Miller.jpg" />
+    <Content Include="Content\Images\Chris Niemyjski.jpg" />
+    <Content Include="Content\Images\Chris Vazquez.jpg" />
+    <Content Include="Content\Images\Christian Fitzsimonds.JPG" />
+    <Content Include="Content\Images\Christina Hunchard.jpg" />
+    <Content Include="Content\Images\Christine Bussey.jpg" />
+    <Content Include="Content\Images\Colin Azeltine.jpg" />
+    <Content Include="Content\Images\Colin DeClue.JPG" />
+    <Content Include="Content\Images\Craig Browder.JPG" />
+    <Content Include="Content\Images\Craig Gadberry.jpg" />
+    <Content Include="Content\Images\Craig Kublin.jpg" />
+    <Content Include="Content\Images\CraigBrowder.jpg" />
+    <Content Include="Content\Images\Dale Traxler.jpg" />
+    <Content Include="Content\Images\Dan Adams.jpg" />
+    <Content Include="Content\Images\Dan Allegrone.jpg" />
+    <Content Include="Content\Images\Dan Costanzo.jpg" />
+    <Content Include="Content\Images\DanCostanzo.jpg" />
+    <Content Include="Content\Images\Daniel Marushka.jpg" />
+    <Content Include="Content\Images\Daniel Nedelcu.jpg" />
+    <Content Include="Content\Images\Darren Berry.jpg" />
+    <Content Include="Content\Images\Dave McChristie.jpg" />
+    <Content Include="Content\Images\Dave Snuckel.jpg" />
+    <Content Include="Content\Images\David Domm.jpg" />
+    <Content Include="Content\Images\David Hasselhoff.jpg" />
+    <Content Include="Content\Images\David Tranytos.jpg" />
+    <Content Include="Content\Images\Dax Scott.JPG" />
+    <Content Include="Content\Images\Deepa Shanmugasundaram.jpg" />
+    <Content Include="Content\Images\Derek Gusoff.jpg" />
+    <Content Include="Content\Images\Derek Poppink.jpg" />
+    <Content Include="Content\Images\Dev Deol.jpg" />
+    <Content Include="Content\Images\Donal Casey.jpg" />
+    <Content Include="Content\Images\Doug Couto.jpg" />
+    <Content Include="Content\Images\Doug Davis.jpg" />
+    <Content Include="Content\Images\Drew Null.JPG" />
+    <Content Include="Content\Images\Ed Flynn.jpg" />
+    <Content Include="Content\Images\Eli Albert.jpg" />
+    <Content Include="Content\Images\Elias Pettengill.jpg" />
+    <Content Include="Content\Images\Emily Alvarez.jpg" />
+    <Content Include="Content\Images\Emily Olson.JPG" />
+    <Content Include="Content\Images\Eric Criniere.JPG" />
+    <Content Include="Content\Images\Eric Lyons.JPG" />
+    <Content Include="Content\Images\Erik Abderhalden.JPG" />
+    <Content Include="Content\Images\Evan Cobb.jpg" />
+    <Content Include="Content\Images\Fabio.jpg" />
+    <Content Include="Content\Images\Gabe Bridger Pic.JPG" />
+    <Content Include="Content\Images\Gabe Streza.jpg" />
+    <Content Include="Content\Images\Gary Leavenworth.jpg" />
+    <Content Include="Content\Images\Gaurav Agarwal.jpg" />
+    <Content Include="Content\Images\Gautam Jaiswal.jpg" />
+    <Content Include="Content\Images\Gina Lee.jpg" />
+    <Content Include="Content\Images\Greg Ostrowski.JPG" />
+    <Content Include="Content\Images\Greg Rice.jpg" />
+    <Content Include="Content\Images\Hiren Patel.JPG" />
+    <Content Include="Content\Images\Jagmohan Rathore.jpg" />
+    <Content Include="Content\Images\jaime Velez.jpg" />
+    <Content Include="Content\Images\Jake DiMare.jpg" />
+    <Content Include="Content\Images\James Maconochie.jpg" />
+    <Content Include="Content\Images\James Mburu.jpg" />
+    <Content Include="Content\Images\Jamie Berman.jpg" />
+    <Content Include="Content\Images\Janna Cenko.jpg" />
+    <Content Include="Content\Images\Jared Arnofsky.jpg" />
+    <Content Include="Content\Images\Jason Abrams.jpg" />
+    <Content Include="Content\Images\Jason Fields.jpg" />
+    <Content Include="Content\Images\Jason Janiak.jpg" />
+    <Content Include="Content\Images\Jason McDermott.jpg" />
+    <Content Include="Content\Images\Jason Prell.JPG" />
+    <Content Include="Content\Images\Jason Sears.JPG" />
+    <Content Include="Content\Images\Jason Shutters.JPG" />
+    <Content Include="Content\Images\Jason Vanderbilt.JPG" />
+    <Content Include="Content\Images\Jay Mueller.jpg" />
+    <Content Include="Content\Images\Jeff Conway.jpg" />
+    <Content Include="Content\Images\Jeff McMahon.jpg" />
+    <Content Include="Content\Images\Jeff Small.JPG" />
+    <Content Include="Content\Images\Jeff Willinger.jpg" />
+    <Content Include="Content\Images\Jeremy Dedic.JPG" />
+    <Content Include="Content\Images\Jeremy Williams.jpg" />
+    <Content Include="Content\Images\Jesse Murray.jpg" />
+    <Content Include="Content\Images\Jesse Wilbur.jpg" />
+    <Content Include="Content\Images\Jilla Malek.JPG" />
+    <Content Include="Content\Images\Jim Noellsch.jpg" />
+    <Content Include="Content\Images\Jimmy Hopton.jpg" />
+    <Content Include="Content\Images\Joaquin Grimaldo.JPG" />
+    <Content Include="Content\Images\Jobin Ephrem.jpg" />
+    <Content Include="Content\Images\Joe Dunne.jpg" />
+    <Content Include="Content\Images\Joe Meyer.JPG" />
+    <Content Include="Content\Images\Joel Kienitz.jpg" />
+    <Content Include="Content\Images\John Ingraffia.JPG" />
+    <Content Include="Content\Images\John Purnell.JPG" />
+    <Content Include="Content\Images\John Schneider.jpg" />
+    <Content Include="Content\Images\Jon Biere.jpg" />
+    <Content Include="Content\Images\Jon O.jpg" />
+    <Content Include="Content\Images\Jon Samp.jpg" />
+    <Content Include="Content\Images\Jonah Burstein.jpg" />
+    <Content Include="Content\Images\Jonathan Dominguez.jpg" />
+    <Content Include="Content\Images\Jonathan Lane.jpg" />
+    <Content Include="Content\Images\Jonathan Rupp.jpg" />
+    <Content Include="Content\Images\Joseph Lee.jpg" />
+    <Content Include="Content\Images\Josh Eberhardy.JPG" />
+    <Content Include="Content\Images\Joshua Bates.jpg" />
+    <Content Include="Content\Images\Joshua Chung.jpg" />
+    <Content Include="Content\Images\Julie Lewis.jpg" />
+    <Content Include="Content\Images\Justin Bradley.jpg" />
+    <Content Include="Content\Images\Kapil Trivedi.jpg" />
+    <Content Include="Content\Images\Kareem Hindi.jpg" />
+    <Content Include="Content\Images\Karen Dringenberg.JPG" />
+    <Content Include="Content\Images\Kathryn Ciaralli.jpg" />
+    <Content Include="Content\Images\Keith Murphy.jpg" />
+    <Content Include="Content\Images\Keith Russell.jpg" />
+    <Content Include="Content\Images\Keith Thompson.jpg" />
+    <Content Include="Content\Images\Kelly Noah.jpg" />
+    <Content Include="Content\Images\Kelsey Loveday.jpg" />
+    <Content Include="Content\Images\Kevin Newhouse.jpg" />
+    <Content Include="Content\Images\Kevin Prescott.JPG" />
+    <Content Include="Content\Images\Khader Abdul.jpg" />
+    <Content Include="Content\Images\Kia Horton.JPG" />
+    <Content Include="Content\Images\Kim Bleiler.jpg" />
+    <Content Include="Content\Images\Kimberly Arakelian.jpg" />
+    <Content Include="Content\Images\Kiran Kakanur.JPG" />
+    <Content Include="Content\Images\Kirk McPherson.jpg" />
+    <Content Include="Content\Images\Kristina Fitzgerald.JPG" />
+    <Content Include="Content\Images\Kristine Slaboszewski.JPG" />
+    <Content Include="Content\Images\Krystal Blesi.jpg" />
+    <Content Include="Content\Images\Laraib Jafri.jpg" />
+    <Content Include="Content\Images\Laurel Petty.jpg" />
+    <Content Include="Content\Images\Lauren Berkowitz.jpg" />
+    <Content Include="Content\Images\Lauren Helwig.jpg" />
+    <Content Include="Content\Images\Leslie Gaustautas.jpg" />
+    <Content Include="Content\Images\Leslie Lockett.jpg" />
+    <Content Include="Content\Images\Lindsay Baehren.jpg" />
+    <Content Include="Content\Images\Lisa DiPiero.jpg" />
+    <Content Include="Content\Images\Lisa Legro.jpg" />
+    <Content Include="Content\Images\Lisa Poirier.jpg" />
+    <Content Include="Content\Images\Liz Sdregas.JPG" />
+    <Content Include="Content\Images\Luke Hitpas.JPG" />
+    <Content Include="Content\Images\Madlene Olander.jpg" />
+    <Content Include="Content\Images\Magen Stewart.jpg" />
+    <Content Include="Content\Images\Mahendra Shekhawat.jpg" />
+    <Content Include="Content\Images\Marcy Boesen.jpg" />
+    <Content Include="Content\Images\Maria Andrade.jpg" />
+    <Content Include="Content\Images\Maris Pukitis.jpg" />
+    <Content Include="Content\Images\Mark Abbott.jpg" />
+    <Content Include="Content\Images\Mark Drespling.jpg" />
+    <Content Include="Content\Images\Mark Graber.jpg" />
+    <Content Include="Content\Images\Mark MacDonald.JPG" />
+    <Content Include="Content\Images\Mark Martinelli.jpg" />
+    <Content Include="Content\Images\Mark Oglia.jpg" />
+    <Content Include="Content\Images\Mark Ursino.jpg" />
+    <Content Include="Content\Images\Mat Thomas.jpg" />
+    <Content Include="Content\Images\Matt Boreen.JPG" />
+    <Content Include="Content\Images\Matt Butz.jpg" />
+    <Content Include="Content\Images\Matt Klein.jpg" />
+    <Content Include="Content\Images\Matt Schaub.jpg" />
+    <Content Include="Content\Images\Max Schaefer.jpg" />
+    <Content Include="Content\Images\Meegan Decker.jpg" />
+    <Content Include="Content\Images\Megan Williams.jpg" />
+    <Content Include="Content\Images\Melissa Forrester.jpg" />
+    <Content Include="Content\Images\Melissa Godden.jpg" />
+    <Content Include="Content\Images\Melissa Leffin.jpg" />
+    <Content Include="Content\Images\Melissa Paris.JPG" />
+    <Content Include="Content\Images\Micah Swigert.JPG" />
+    <Content Include="Content\Images\Mike Becker.JPG" />
+    <Content Include="Content\Images\Mike Horner.jpg" />
+    <Content Include="Content\Images\Mike Marnocha.jpg" />
+    <Content Include="Content\Images\Mike McDermott.JPG" />
+    <Content Include="Content\Images\Mike Weisert.jpg" />
+    <Content Include="Content\Images\Mito Are.jpg" />
+    <Content Include="Content\Images\Nathan Christopher.jpg" />
+    <Content Include="Content\Images\Nathaniel Emerick.JPG" />
+    <Content Include="Content\Images\Naveed Lakhani.JPG" />
+    <Content Include="Content\Images\Nazareth Tajrian.jpg" />
+    <Content Include="Content\Images\Neal Levin.JPG" />
+    <Content Include="Content\Images\Neal Rudnick.jpg" />
+    <Content Include="Content\Images\Nerijus Baniukevicius.jpg" />
+    <Content Include="Content\Images\Nic Cage.jpg" />
+    <Content Include="Content\Images\Nick Carlson.jpg" />
+    <Content Include="Content\Images\Nick Groos.jpg" />
+    <Content Include="Content\Images\Nick Laidlaw.jpg" />
+    <Content Include="Content\Images\Nick Shank.jpg" />
+    <Content Include="Content\Images\Nicole Lambiase.jpg" />
+    <Content Include="Content\Images\NoPhoto.jpg" />
+    <Content Include="Content\Images\Owen Craig.JPG" />
+    <Content Include="Content\Images\Paschall Freeman.jpg" />
+    <Content Include="Content\Images\Paul Dain.jpg" />
+    <Content Include="Content\Images\Paul Hermany.jpg" />
+    <Content Include="Content\Images\Paul Mathai.jpg" />
+    <Content Include="Content\Images\Paul McAleer.JPG" />
+    <Content Include="Content\Images\Pernilla Peterson.JPG" />
+    <Content Include="Content\Images\Pete Zeman.JPG" />
+    <Content Include="Content\Images\Peter Clark.jpg" />
+    <Content Include="Content\Images\Peter OConnell.jpg" />
+    <Content Include="Content\Images\Phil Paris.JPG" />
+    <Content Include="Content\Images\Phu-Xuan Le.jpg" />
+    <Content Include="Content\Images\Praful Jangid.JPG" />
+    <Content Include="Content\Images\Praveen Soni.jpg" />
+    <Content Include="Content\Images\Rachel Zinser.jpg" />
+    <Content Include="Content\Images\Rafal Farmas.JPG" />
+    <Content Include="Content\Images\Rajaie Johnson.jpg" />
+    <Content Include="Content\Images\Ram Kota.jpg" />
+    <Content Include="Content\Images\RamKota.jpg" />
+    <Content Include="Content\Images\Ravindra Singh Rathore.jpg" />
+    <Content Include="Content\Images\Rebecca LaRue.JPG" />
+    <Content Include="Content\Images\Rebecca Steurer.jpg" />
+    <Content Include="Content\Images\Rich Grenwick.jpg" />
+    <Content Include="Content\Images\Rishiraj Shekhawat.jpg" />
+    <Content Include="Content\Images\Rob Ahnemann.jpg" />
+    <Content Include="Content\Images\Robert Naughton.jpg" />
+    <Content Include="Content\Images\Robin Schaffer.jpg" />
+    <Content Include="Content\Images\Ron Scheuman.jpg" />
+    <Content Include="Content\Images\Ross Freedman.jpg" />
+    <Content Include="Content\Images\Ross Updegraff.jpg" />
+    <Content Include="Content\Images\Russell Strauss.jpg" />
+    <Content Include="Content\Images\Ryan Corliss.JPG" />
+    <Content Include="Content\Images\Ryan Snyder.jpg" />
+    <Content Include="Content\Images\Sakshi Tejpal.jpg" />
+    <Content Include="Content\Images\Sanjeev Karmacharya.jpg" />
+    <Content Include="Content\Images\Sarah Derry.jpg" />
+    <Content Include="Content\Images\Sarah Umber.JPG" />
+    <Content Include="Content\Images\Sarah Wallace.JPG" />
+    <Content Include="Content\Images\SarahDerry.jpg" />
+    <Content Include="Content\Images\Sarvesh Jain.jpg" />
+    <Content Include="Content\Images\Scot Goodhart Pic.JPG" />
+    <Content Include="Content\Images\Scott Hamilton.JPG" />
+    <Content Include="Content\Images\Scott Rojas.jpg" />
+    <Content Include="Content\Images\Sean Sartell.JPG" />
+    <Content Include="Content\Images\Shweta Singh.jpg" />
+    <Content Include="Content\Images\Simon Smith.jpg" />
+    <Content Include="Content\Images\Sona Allen.JPG" />
+    <Content Include="Content\Images\Sreeni Amrutur.jpg" />
+    <Content Include="Content\Images\Stephen Culp.JPG" />
+    <Content Include="Content\Images\Stephen Gilboy.JPG" />
+    <Content Include="Content\Images\Steve Dykstra.jpg" />
+    <Content Include="Content\Images\Steve Ross.JPG" />
+    <Content Include="Content\Images\Steve Samnadda.jpg" />
+    <Content Include="Content\Images\Steve Sobenko.jpg" />
+    <Content Include="Content\Images\Steve Tonkin.JPG" />
+    <Content Include="Content\Images\Steven Mierop.jpg" />
+    <Content Include="Content\Images\Steven Schnorr.jpg" />
+    <Content Include="Content\Images\Suman Kamath.jpg" />
+    <Content Include="Content\Images\Syed Belgam.jpg" />
+    <Content Include="Content\Images\Tammi Casey.jpg" />
+    <Content Include="Content\Images\Tegan Wilson.jpg" />
+    <Content Include="Content\Images\Terry Han.jpg" />
+    <Content Include="Content\Images\Thomas O%27Donnell.jpg" />
+    <Content Include="Content\Images\Tim Brown.jpg" />
+    <Content Include="Content\Images\Tim Chantome.JPG" />
+    <Content Include="Content\Images\Tim Khasanov.jpg" />
+    <Content Include="Content\Images\Tim Kippley.JPG" />
+    <Content Include="Content\Images\Tim Seifert.jpg" />
+    <Content Include="Content\Images\Tim Stahl.jpg" />
+    <Content Include="Content\Images\TJ Sugnet.jpg" />
+    <Content Include="Content\Images\Tom Keuten.jpg" />
+    <Content Include="Content\Images\Tom White.jpg" />
+    <Content Include="Content\Images\TomKeuten.jpg" />
+    <Content Include="Content\Images\Tricia Perez.jpg" />
+    <Content Include="Content\Images\Tyler Johnston.jpg" />
+    <Content Include="Content\Images\Vadim Dolt.jpg" />
+    <Content Include="Content\Images\Vaiva Vaisnys.JPG" />
+    <Content Include="Content\Images\Vipin Banka.jpg" />
+    <Content Include="Content\Images\Walker Harden.jpg" />
+    <Content Include="Content\Images\Wendy Karlyn.jpg" />
+    <Content Include="Content\Images\Zach Quinn.jpg" />
+    <Content Include="Content\Images\Zack Kelemen.jpg" />
+    <Content Include="favicon.ico" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Scripts\bootstrap.js" />
+    <Content Include="Content\Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Content\Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Content\Scripts\jquery-1.10.2.js" />
+    <Content Include="Content\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Content\Scripts\modernizr-2.6.2.js" />
+    <Content Include="Content\Scripts\respond.js" />
+    <Content Include="Content\Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <Content Include="peeps.json" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Content\Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>22336</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:22336/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
