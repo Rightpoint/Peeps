@@ -527,6 +527,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <None Include="Properties\PublishProfiles\rp-peeps - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -534,7 +535,9 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <EmbeddedResource Include="App_Data\peeps.json" />
+    <Content Include="App_Data\peeps.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Project_Readme.html" />
     <Content Include="Content\Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>

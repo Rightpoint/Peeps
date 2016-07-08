@@ -11,6 +11,7 @@
     <Page.Resources>
         <DataTemplate x:Key="PeepsTemplateWide">
             <StackPanel Orientation="Horizontal">
+                <Image Source="{Binding ImageUrl}" Stretch="UniformToFill" HorizontalAlignment="Center"/>
                 <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="None" HorizontalAlignment="Left"/>
                 <StackPanel Padding="15,10" VerticalAlignment="Center">
                     <TextBlock  Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
@@ -25,6 +26,7 @@
 
         <DataTemplate x:Key="PeepsTemplateNarrow">
             <Grid>
+                <Image Source="{Binding ImageUrl}" Stretch="UniformToFill" HorizontalAlignment="Center"/>
                 <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <StackPanel Padding="15,10" VerticalAlignment="Bottom" Background="{StaticResource SemiTransparentBlack}">
                     <TextBlock  Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>

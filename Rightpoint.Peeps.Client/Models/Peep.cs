@@ -11,5 +11,9 @@
         public string Office { get; set; }
 
         public byte[] ImageBytes { get; set; }
+
+        public string ImageUrl { get; set; }
+
+        public bool IsNewHire { get; set; }
     }
 }
