@@ -21,7 +21,7 @@
     <ApplicationInsightsResourceId>/subscriptions/76d210f9-5d7b-4875-b92a-1267ab071303/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/Rightpoint.Peeps.Client</ApplicationInsightsResourceId>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxPackageDir>C:\Users\jmeyer\Downloads\Peeps\</AppxPackageDir>
-    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
     <AppxBundle>Always</AppxBundle>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">

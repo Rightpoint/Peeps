@@ -14,7 +14,8 @@
                 <Image Source="{Binding ImageUrl}" Stretch="UniformToFill" HorizontalAlignment="Center"/>
                 <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="None" HorizontalAlignment="Left"/>
                 <StackPanel Padding="15,10" VerticalAlignment="Center">
-                    <TextBlock  Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
+                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Salutation}"/>
+                    <TextBlock Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}">
                         <Run Text="{Binding Office}"/>
                         <Run Text="{Binding Team}"/>

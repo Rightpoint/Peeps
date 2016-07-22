@@ -14,6 +14,6 @@
 
         public string ImageUrl { get; set; }
 
-        public bool IsNewHire { get; set; }
+        public string Salutation { get; set; }
     }
 }

@@ -46,16 +46,29 @@ namespace Rightpoint.Peeps.Client.ViewModels
             dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 100);
             dispatcherTimer.Start();
 
-            //TODO: load data on timer
+            var refreshTimer = new DispatcherTimer();
+            refreshTimer.Tick += RefreshTimerOnTick;
+            refreshTimer.Interval = new TimeSpan(0, 0, 2, 0, 0);
+            refreshTimer.Start();
+        }
+
+        private async void RefreshTimerOnTick(object sender, object o)
+        {
+            //TODO: what's the best way to refresh? Navigate to MainPage.xaml again and clear stack?
         }
 
         protected override async Task LoadData(NavigationEventArgs e)
         {
-            this.Peeps.Collection.Add(new Peep());
+            //this.Peeps.Collection.Add(new Peep());
 
             // Get new users
             IMobileServiceTable<Peep> peepsTable = this._mobileServiceClient.GetTable<Peep>();
             List<Peep> peeps = (await peepsTable.ReadAsync()).ToList();
+
+            foreach (var peep in peeps)
+            {
+                peep.Salutation = "Welcome!";
+            }
 
             // Get a sample of old users
             using (var client = new HttpClient())
@@ -65,16 +78,16 @@ namespace Rightpoint.Peeps.Client.ViewModels
                 var args = string.Empty;
 
                 // Fetch users based on parameters 
-                var r = GetPeepsByArgs(client, args).Result;
+                var r = GetPeepsByArgs(client, args);
 
                 //Take no more than 30 from "old" set
-                peeps.AddRange(r.OrderBy(x => Guid.NewGuid()).Take(30).ToList());
+                peeps.AddRange(r.OrderBy(x => Guid.NewGuid()).Take(30 - peeps.Count).ToList());
             }
 
             this.Peeps.Initialize(peeps.OrderBy(x=> Guid.NewGuid()).ToList());
         }
 
-        private async Task<IEnumerable<Peep>> GetPeepsByArgs(HttpClient client, string args)
+        private IEnumerable<Peep> GetPeepsByArgs(HttpClient client, string args)
         {
             var peeps = new List<Peep>();
             var response = client.GetAsync(new Uri($"http://rp-peeps.azurewebsites.net/api/peeps?args={args}")).Result;

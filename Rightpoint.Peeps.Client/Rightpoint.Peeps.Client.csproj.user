@@ -4,7 +4,7 @@
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>false</UseEmulator>
     <RemoteDebugEnabled>true</RemoteDebugEnabled>
-    <RemoteDebugMachine>10.10.1.7</RemoteDebugMachine>
+    <RemoteDebugMachine>10.10.2.131</RemoteDebugMachine>
     <UseAuthentication>false</UseAuthentication>
     <CreateCleanLayout>true</CreateCleanLayout>
     <AuthenticationMode>Universal</AuthenticationMode>
@@ -12,7 +12,7 @@
   <PropertyGroup>
     <AppxPackageIsForStore>False</AppxPackageIsForStore>
     <AppxShowAllApps>False</AppxShowAllApps>
-    <AppxBuildConfigurationSelection>x86|x64|arm</AppxBuildConfigurationSelection>
+    <AppxBuildConfigurationSelection>arm</AppxBuildConfigurationSelection>
     <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
@@ -22,7 +22,7 @@
     <CreateCleanLayout>true</CreateCleanLayout>
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>false</UseEmulator>
-    <UseSimulator>false</UseSimulator>
+    <UseSimulator>true</UseSimulator>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <AuthenticationMode>Windows</AuthenticationMode>
