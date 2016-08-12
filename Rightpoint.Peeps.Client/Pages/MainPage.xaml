@@ -17,10 +17,10 @@
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Salutation}"/>
                     <TextBlock Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}">
-                        <Run Text="{Binding Office}"/>
+                        <!--<Run Text="{Binding Office}"/>-->
                         <Run Text="{Binding Team}"/>
                     </TextBlock>
-                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Hometown}"/>
+                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Office}"/>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>
@@ -32,10 +32,10 @@
                 <StackPanel Padding="15,10" VerticalAlignment="Bottom" Background="{StaticResource SemiTransparentBlack}">
                     <TextBlock  Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}">
-                        <Run Text="{Binding Office}"/>
+                        <!--<Run Text="{Binding Office}"/>-->
                         <Run Text="{Binding Team}"/>
                     </TextBlock>
-                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Hometown}"/>
+                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Office}"/>
                 </StackPanel>
             </Grid>
         </DataTemplate>

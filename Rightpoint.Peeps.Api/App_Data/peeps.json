@@ -25,14 +25,14 @@
     {
       "name": "Aaron Starkston",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Aaron Starkston.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Addam Wassel",
       "office": "Detroit",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Addam Wassel.jpg",
       "origin": "Rightpoint"
     },
@@ -123,21 +123,21 @@
     {
       "name": "Andrew Varnon",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Andrew Varnon.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Andy Bateman",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Andy Bateman.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Anna Trivino",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Anna Trivino.jpg",
       "origin": "Rightpoint"
     },
@@ -158,29 +158,22 @@
     {
       "name": "Austin Strajack",
       "office": "Chicago",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "Austin Strajack.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Barbara Kubas",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Barbara Kubas.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Bartel Welch",
       "office": "Detroit",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Bartel Welch.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Bethany Steffen",
-      "office": "Chicago",
-      "serviceLine": "Business CMS",
-      "photo": "Bethany Steffen.JPG",
       "origin": "Rightpoint"
     },
     {
@@ -207,7 +200,7 @@
     {
       "name": "Brandon Barnett",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Brandon Barnett.JPG",
       "origin": "Rightpoint"
     },
@@ -221,21 +214,21 @@
     {
       "name": "Brennen Cage",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Brennen Cage.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Brian Bennewitz",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Brian Bennewitz.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Brian Hulse",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Brian Hulse.JPG",
       "origin": "Rightpoint"
     },
@@ -249,7 +242,7 @@
     {
       "name": "Cami Davis",
       "office": "Chicago",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "Cami Davis.jpg",
       "origin": "Rightpoint"
     },
@@ -263,15 +256,8 @@
     {
       "name": "Chris Domino",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Chris Domino.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Chris Esposito",
-      "office": "Chicago",
-      "serviceLine": "Delivery Support/Operations",
-      "photo": "Chris Esposito.JPG",
       "origin": "Rightpoint"
     },
     {
@@ -284,7 +270,7 @@
     {
       "name": "Chris Miller",
       "office": "Chicago",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "Chris Miller.jpg",
       "origin": "Rightpoint"
     },
@@ -298,7 +284,7 @@
     {
       "name": "Christian Fitzsimonds",
       "office": "Detroit",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Christian Fitzsimonds.jpg",
       "origin": "Rightpoint"
     },
@@ -319,21 +305,21 @@
     {
       "name": "Colin DeClue",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Colin DeClue.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Craig Browder",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "CraigBrowder.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Craig Gadberry",
       "office": "Chicago",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "Craig Gadberry.jpg",
       "origin": "Rightpoint"
     },
@@ -347,7 +333,7 @@
     {
       "name": "Dan Costanzo",
       "office": "Chicago",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "DanCostanzo.jpg",
       "origin": "Rightpoint"
     },
@@ -389,14 +375,14 @@
     {
       "name": "Dax Scott",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Dax Scott.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Derek Gusoff",
       "office": "Detroit",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Derek Gusoff.jpg",
       "origin": "Rightpoint"
     },
@@ -410,21 +396,21 @@
     {
       "name": "Dev Deol",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Dev Deol.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Drew Null",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Drew Null.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Emily Olson",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Emily Olson.jpg",
       "origin": "Rightpoint"
     },
@@ -459,7 +445,7 @@
     {
       "name": "Gautam Jaiswal",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Gautam Jaiswal.jpg",
       "origin": "Rightpoint"
     },
@@ -473,7 +459,7 @@
     {
       "name": "Greg Ostrowski",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Greg Ostrowski.JPG",
       "origin": "Rightpoint"
     },
@@ -529,21 +515,21 @@
     {
       "name": "Jason McDermott",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Jason McDermott.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Jason Prell",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Jason Prell.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Jason Sears",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Jason Sears.JPG",
       "origin": "Rightpoint"
     },
@@ -571,7 +557,7 @@
     {
       "name": "Jeff Willinger",
       "office": "Chicago",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "Jeff Willinger.jpg",
       "origin": "Rightpoint"
     },
@@ -592,7 +578,7 @@
     {
       "name": "Jesse Murray",
       "office": "Detroit",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Jesse Murray.jpg",
       "origin": "Rightpoint"
     },
@@ -613,7 +599,7 @@
     {
       "name": "Jim Noellsch",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Jim Noellsch.jpg",
       "origin": "Rightpoint"
     },
@@ -641,21 +627,21 @@
     {
       "name": "Joe Dunne",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Joe Dunne.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Joe Meyer",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Joe Meyer.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Joel Kienitz",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Joel Kienitz.jpg",
       "origin": "Rightpoint"
     },
@@ -669,7 +655,7 @@
     {
       "name": "Jon Biere",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Jon Biere.jpg",
       "origin": "Rightpoint"
     },
@@ -683,21 +669,21 @@
     {
       "name": "Jon Samp",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Jon Samp.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Jonathan Dominguez",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Jonathan Dominguez.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Jonathan Rupp",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Jonathan Rupp.jpg",
       "origin": "Rightpoint"
     },
@@ -711,7 +697,7 @@
     {
       "name": "Josh Eberhardy",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Josh Eberhardy.JPG",
       "origin": "Rightpoint"
     },
@@ -767,21 +753,21 @@
     {
       "name": "Kevin Newhouse",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Kevin Newhouse.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Kevin Prescott",
       "office": "Detroit",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "Kevin Prescott.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Khader Abdul",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Khader Abdul.jpg",
       "origin": "Rightpoint"
     },
@@ -886,7 +872,7 @@
     {
       "name": "Liz Sdregas",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Liz Sdregas.JPG",
       "origin": "Rightpoint"
     },
@@ -907,7 +893,7 @@
     {
       "name": "Maris Pukitis",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Maris Pukitis.jpg",
       "origin": "Rightpoint"
     },
@@ -949,7 +935,7 @@
     {
       "name": "Matt Schaub",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Matt Schaub.jpg",
       "origin": "Rightpoint"
     },
@@ -991,7 +977,7 @@
     {
       "name": "Michael McDermott",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Mike McDermott.JPG",
       "origin": "Rightpoint"
     },
@@ -1012,7 +998,7 @@
     {
       "name": "Mike Marnocha",
       "office": "Detroit",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Mike Marnocha.jpg",
       "origin": "Rightpoint"
     },
@@ -1040,14 +1026,14 @@
     {
       "name": "Neal Rudnick",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Neal Rudnick.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Nerijus Baniukevicius",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Nerijus Baniukevicius.jpg",
       "origin": "Rightpoint"
     },
@@ -1068,7 +1054,7 @@
     {
       "name": "Nick Groos",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Nick Groos.jpg",
       "origin": "Rightpoint"
     },
@@ -1082,7 +1068,7 @@
     {
       "name": "Owen Craig",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Owen Craig.jpg",
       "origin": "Rightpoint"
     },
@@ -1096,7 +1082,7 @@
     {
       "name": "Paul Hermany",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Paul Hermany.jpg",
       "origin": "Rightpoint"
     },
@@ -1124,7 +1110,7 @@
     {
       "name": "Peter Clark",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Peter Clark.jpg",
       "origin": "Rightpoint"
     },
@@ -1138,7 +1124,7 @@
     {
       "name": "Phil Paris",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Phil Paris.JPG",
       "origin": "Rightpoint"
     },
@@ -1152,14 +1138,14 @@
     {
       "name": "Rafal Farmas",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Rafal Farmas.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Ram Kota",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "RamKota.jpg",
       "origin": "Rightpoint"
     },
@@ -1180,21 +1166,21 @@
     {
       "name": "Rejaie Johnson",
       "office": "Denver",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Rajaie Johnson.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Rich Grenwick",
       "office": "Detroit",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Rich Grenwick.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Robin Schaffer",
       "office": "Denver",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "Robin Schaffer.jpg",
       "origin": "Rightpoint"
     },
@@ -1210,13 +1196,6 @@
       "office": "Chicago",
       "serviceLine": "Co-founder",
       "photo": "Ross Freedman.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Ross Updegraff",
-      "office": "Chicago",
-      "serviceLine": "Application CMS",
-      "photo": "Ross Updegraff.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -1236,7 +1215,7 @@
     {
       "name": "Sanjeev Karmacharya",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Sanjeev Karmacharya.jpg",
       "origin": "Rightpoint"
     },
@@ -1264,14 +1243,14 @@
     {
       "name": "Scot Goodhart",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Scot Goodhart Pic.JPG",
       "origin": "Rightpoint"
     },
     {
       "name": "Scott Hamilton",
       "office": "Chicago",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "Scott Hamilton.JPG",
       "origin": "Rightpoint"
     },
@@ -1285,7 +1264,7 @@
     {
       "name": "Sean Sartell",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Sean Sartell.JPG",
       "origin": "Rightpoint"
     },
@@ -1327,7 +1306,7 @@
     {
       "name": "Steve Samnadda",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Steve Samnadda.jpg",
       "origin": "Rightpoint"
     },
@@ -1341,7 +1320,7 @@
     {
       "name": "Steven Mierop",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Steven Mierop.jpg",
       "origin": "Rightpoint"
     },
@@ -1369,21 +1348,21 @@
     {
       "name": "Tegan Wilson",
       "office": "Denver",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Tegan Wilson.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Thomas White",
       "office": "Detroit",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Tom White.jpg",
       "origin": "Rightpoint"
     },
     {
       "name": "Tim Chantome",
       "office": "Chicago",
-      "serviceLine": "Application CMS",
+      "serviceLine": "App Dev",
       "photo": "Tim Chantome.JPG",
       "origin": "Rightpoint"
     },
@@ -1404,7 +1383,7 @@
     {
       "name": "Tom Keuten",
       "office": "Detroit",
-      "serviceLine": "Business CMS",
+      "serviceLine": "Business Development",
       "photo": "TomKeuten.jpg",
       "origin": "Rightpoint"
     },

@@ -31,67 +31,11 @@ namespace Rightpoint.Peeps.Sync
                 //},
                 new Peep
                 {
-                    Name = "Andrew Barnett",
-                    Hometown = "Grosse Pointe, MI",
-                    Team = "App Dev",
+                    Name = "Dani Soukup",
+                    Hometown = "Svilengrad, Bulgaria",
+                    Team = "Creative",
                     Office = "Chicago",
-                    ImagePath = @"c:\temp\people\Andrew Barnett.png"
-                },
-                new Peep
-                {
-                    Name = "Jordan Magenta",
-                    Hometown = "Ann Arbor, MI",
-                    Team = "Marketing",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\Jordan Magenta.jpg"
-                },
-                new Peep
-                {
-                    Name = "Shay Depies",
-                    Hometown = "Alpharetta, GA",
-                    Team = "Client Partner",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\Shay Depies.JPG"
-                },
-                new Peep
-                {
-                    Name = "Siouxzi Donnelly",
-                    Hometown = "Kokomo, IN ",
-                    Team = "Content Strategy",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\Siouxzi Donnelly.JPG"
-                },
-                new Peep
-                {
-                    Name = "Andrew Gilbert",
-                    Hometown = "Chicago, IL",
-                    Team = "Delivery Support",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\Andrew Gilbert.JPG"
-                },
-                new Peep
-                {
-                    Name = "Brendan Carlson",
-                    Hometown = "Grand Blanc, MI",
-                    Team = "App Dev",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\Brendan Carlson.jpg"
-                },
-                new Peep
-                {
-                    Name = "Ryan Michalec",
-                    Hometown = " Lake Orion, MI",
-                    Team = "App Dev",
-                    Office = "Michigan",
-                    ImagePath = @"c:\temp\people\Ryan Michalec.jpg"
-                },
-                new Peep
-                {
-                    Name = "Akshat Sangal",
-                    Hometown = "Muzaffarnagar, India",
-                    Team = "Salesforce",
-                    Office = "Chicago",
-                    ImagePath = @"c:\temp\people\Akshat Sangal.jpg"
+                    ImagePath = @"c:\temp\people\Dani Soukup.jpg"
                 },
                 /*
                 new Peep
