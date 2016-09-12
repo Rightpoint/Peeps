@@ -16,13 +16,14 @@
     <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <RemoteDebugMachine>10.10.2.134</RemoteDebugMachine>
-    <RemoteDebugEnabled>false</RemoteDebugEnabled>
+    <RemoteDebugMachine>rpcrpi02</RemoteDebugMachine>
+    <RemoteDebugEnabled>true</RemoteDebugEnabled>
     <UseAuthentication>false</UseAuthentication>
     <CreateCleanLayout>true</CreateCleanLayout>
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>false</UseEmulator>
-    <UseSimulator>true</UseSimulator>
+    <UseSimulator>false</UseSimulator>
+    <AuthenticationMode>Universal</AuthenticationMode>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <AuthenticationMode>Windows</AuthenticationMode>
