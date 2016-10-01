@@ -11,13 +11,30 @@
     <Page.Resources>
         <DataTemplate x:Key="PeepsTemplateWide">
             <StackPanel Orientation="Horizontal">
-                <Image Source="{Binding ImageUrl}" Stretch="UniformToFill" HorizontalAlignment="Center"/>
-                <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="None" HorizontalAlignment="Left"/>
+                <Canvas Width="400">
+                    <!-- API Images -->
+                    <Image Source="{Binding ImageUrl}" Stretch="UniformToFill" HorizontalAlignment="Center"/>
+
+                    <!-- Decoratiom -->
+                    <Image DataContext="{Binding Face.FaceRectangle}" 
+                           Source="../Assets/Decoration/m1.png"
+                           MinWidth="{Binding Width}" 
+                           MaxWidth="{Binding Width}"
+                           MinHeight="{Binding Height}"
+                           MaxHeight="{Binding Height}">
+                        <Image.RenderTransform>
+                            <TranslateTransform X="{Binding Left}" Y="{Binding Top}"/>
+                        </Image.RenderTransform>
+                    </Image>
+
+                    <!-- New Hires -->
+                    <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="None" HorizontalAlignment="Left"/>
+                </Canvas>
+
                 <StackPanel Padding="15,10" VerticalAlignment="Center">
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Salutation}"/>
                     <TextBlock Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}">
-                        <!--<Run Text="{Binding Office}"/>-->
                         <Run Text="{Binding Team}"/>
                     </TextBlock>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Office}"/>
@@ -27,12 +44,16 @@
 
         <DataTemplate x:Key="PeepsTemplateNarrow">
             <Grid>
+                <!-- Image -->
                 <Image Source="{Binding ImageUrl}" Stretch="UniformToFill" HorizontalAlignment="Center"/>
                 <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+                <!-- Decoratiom -->
+                <!--<Rectangle DataContext="{Binding Face.FaceRectangle}" Stroke="Chartreuse" StrokeThickness="2"  MinWidth="{Binding Width}" MinHeight="{Binding Height}"></Rectangle>-->
+
                 <StackPanel Padding="15,10" VerticalAlignment="Bottom" Background="{StaticResource SemiTransparentBlack}">
                     <TextBlock  Style="{StaticResource Heading}" Foreground="{StaticResource OffWhite}" Text="{Binding Name}"/>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}">
-                        <!--<Run Text="{Binding Office}"/>-->
                         <Run Text="{Binding Team}"/>
                     </TextBlock>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Office}"/>
@@ -89,8 +110,6 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-
-
 
         <RelativePanel>
             <StackPanel x:Name="PeepsTime" DataContext="{Binding DigitalClock}" Padding="10,15">

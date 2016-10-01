@@ -72,13 +72,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Ali Quadri",
-      "office": "Chicago",
-      "serviceLine": "User Experience",
-      "photo": "Ali Quadri.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Allie Gauthier",
       "office": "Chicago",
       "serviceLine": "Delivery Support/Recruiting",
@@ -233,13 +226,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Bryan Bruno",
-      "office": "Chicago",
-      "serviceLine": "Salesforce",
-      "photo": "Bryan Bruno.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Cami Davis",
       "office": "Chicago",
       "serviceLine": "Business Development",
@@ -328,13 +314,6 @@
       "office": "Chicago",
       "serviceLine": "SharePoint",
       "photo": "Dan Adams.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Dan Costanzo",
-      "office": "Chicago",
-      "serviceLine": "Business Development",
-      "photo": "DanCostanzo.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -667,13 +646,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Jon Samp",
-      "office": "Chicago",
-      "serviceLine": "App Dev",
-      "photo": "Jon Samp.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Jonathan Dominguez",
       "office": "Chicago",
       "serviceLine": "App Dev",
@@ -790,13 +762,6 @@
       "office": "Chicago",
       "serviceLine": "SharePoint",
       "photo": "Kiran Kakanur.JPG",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Kristine Slaboszewski",
-      "office": "Chicago",
-      "serviceLine": "User Experience",
-      "photo": "Kristine Slaboszewski.JPG",
       "origin": "Rightpoint"
     },
     {
@@ -1059,13 +1024,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Owen Craig",
-      "office": "Chicago",
-      "serviceLine": "App Dev",
-      "photo": "Owen Craig.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Paul Dain",
       "office": "Chicago",
       "serviceLine": "Client Partner",
@@ -1196,13 +1154,6 @@
       "office": "Chicago",
       "serviceLine": "SharePoint",
       "photo": "Ryan Corliss.JPG",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Ryan Snyder",
-      "office": "Chicago",
-      "serviceLine": "Project Management",
-      "photo": "Ryan Snyder.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -1442,13 +1393,6 @@
       "office": "Dallas",
       "serviceLine": "CMS",
       "photo": "Brandon Lackey.JPG",
-      "origin": "Oasis"
-    },
-    {
-      "name": "Brendan Pugh",
-      "office": "Boston",
-      "serviceLine": "Account Management",
-      "photo": "Brendan Pugh.jpg",
       "origin": "Oasis"
     },
     {
@@ -1701,13 +1645,6 @@
       "office": "Boston",
       "serviceLine": "Production",
       "photo": "Kelsey Loveday.jpg",
-      "origin": "Oasis"
-    },
-    {
-      "name": "Kim Bleiler",
-      "office": "Boston",
-      "serviceLine": "Delivery Support/Operations",
-      "photo": "Kim Bleiler.jpg",
       "origin": "Oasis"
     },
     {

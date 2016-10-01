@@ -1,4 +1,8 @@
-﻿namespace Rightpoint.Peeps.Client.Models
+﻿using System.Collections;
+using System.Collections.Generic;
+using Microsoft.ProjectOxford.Face.Contract;
+
+namespace Rightpoint.Peeps.Client.Models
 {
     public class Peep : Entity
     {
@@ -15,5 +19,7 @@
         public string ImageUrl { get; set; }
 
         public string Salutation { get; set; }
+
+        public Face Face { get; set; }
     }
 }

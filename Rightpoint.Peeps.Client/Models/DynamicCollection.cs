@@ -12,6 +12,7 @@ namespace Rightpoint.Peeps.Client.Models
         private readonly int _rotationExpiryMinimum;
         private readonly int _rotationExpiryMaximum;
 
+
         public DynamicCollection(int rotationExpiryMinimum = 5000, int rotationExpiryMaximum = 10000)
         {
             this._rotationExpiryMinimum = rotationExpiryMinimum;
@@ -77,7 +78,7 @@ namespace Rightpoint.Peeps.Client.Models
             this.InitializeTimer();
         }
 
-        private DispatcherTimer CollectionTimer { get; set; }
+        public DispatcherTimer CollectionTimer { get; set; }
 
         private void InitializeTimer()
         {
@@ -107,7 +108,7 @@ namespace Rightpoint.Peeps.Client.Models
             else
             {
                 CurrentIndex = 0;
-            }
+            }           
 
             Debug.WriteLine($"{DateTime.Now} after ({TimeSpan.FromMilliseconds(this.RotationExpiry).TotalMilliseconds}) milliseconds: Rotate for {CurrentItem.GetType().ToString()}");
         }

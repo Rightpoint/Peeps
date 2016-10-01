@@ -6,16 +6,23 @@ using Rightpoint.Peeps.Client.Models;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using Windows.Foundation;
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Media.Imaging;
+using Microsoft.ProjectOxford.Face;
+using Microsoft.ProjectOxford.Face.Contract;
 using Newtonsoft.Json;
 
 namespace Rightpoint.Peeps.Client.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly IMobileServiceClient _mobileServiceClient;
+        private readonly IFaceServiceClient _faceServiceClient = new FaceServiceClient("key goes here");
+        private readonly IMobileServiceClient _mobileServiceClient;        
 
         public DynamicCollection<Peep> Peeps { get; set; } = new DynamicCollection<Peep>();
 
@@ -48,22 +55,102 @@ namespace Rightpoint.Peeps.Client.ViewModels
 
             var refreshTimer = new DispatcherTimer();
             refreshTimer.Tick += RefreshTimerOnTick;
-            refreshTimer.Interval = new TimeSpan(0, 0, 2, 0, 0);
+            refreshTimer.Interval = new TimeSpan(0, 24, 0, 0);
             refreshTimer.Start();
         }
 
-        private async void RefreshTimerOnTick(object sender, object o)
+        private async void CollectionTimerOnTick(object sender, object o)
         {
-            //TODO: what's the best way to refresh? Navigate to MainPage.xaml again and clear stack?
         }
 
+        private void RefreshTimerOnTick(object sender, object o)
+        {
+            NavigationService.NavigateTo("MainPage");
+        }
+
+        private async Task<FaceRectangle[]> UploadAndDetectFaces(string imageFilePath)
+        {
+            try
+            {
+                using (Stream imageFileStream = File.OpenRead(imageFilePath))
+                {
+                    var faces = await _faceServiceClient.DetectAsync(imageFileStream);
+                    var faceRects = faces.Select(face => face.FaceRectangle);
+                    return faceRects.ToArray();
+                }
+            }
+            catch (Exception)
+            {
+                return new FaceRectangle[0];
+            }
+        }
+
+        private async Task<IEnumerable<Peep>> GetPeepsByArgs(HttpClient client, string args)
+        {
+            var peeps = new List<Peep>();
+            var response = client.GetAsync(new Uri($"http://rp-peeps.azurewebsites.net/api/peeps?args={args}")).Result;
+
+            if (!response.IsSuccessStatusCode) return peeps;
+
+
+            // interpret results
+            var result = JsonConvert.DeserializeObject<Models.Peeps>(await response.Content.ReadAsStringAsync());
+
+            foreach (var p in result.peeps)
+            {
+                try
+                {
+                    var img = "http://rp-peeps.azurewebsites.net" + p.photoPath;
+
+                    var face = await _faceServiceClient.DetectAsync(img);
+
+                    //TODO transform rectangle based on size of image?
+
+                    var peep = new Peep()
+                    {
+                        Name = p.name,
+                        Hometown = p.origin,
+                        Office = p.office,
+                        Team = p.serviceLine,
+                        ImageUrl = img,
+                        Face = face.FirstOrDefault()
+                    };
+
+                    if (peep.Face == null) continue;
+
+                    peeps.Add(peep);
+                    Debug.WriteLine($"Added {peep.Name}!");                    
+                }
+                catch (FaceAPIException ex)
+                {
+                    Debug.WriteLine($"{ex.ErrorCode}: {ex.ErrorMessage}");
+
+                    return peeps;
+                    await Task.Delay(10000);
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"{ex.Source}: {ex.Message}");
+                }
+
+            }
+            return peeps;
+        }
+
+        private void dispatcherTimer_Tick(object sender, object e)
+        {
+            //var strDate = DigitalClock.DateFormatted;
+            //var strTime = DigitalClock.TimeFormatted;
+
+            //Debug.WriteLine(strTime);
+        }
+
+        #region Override
         protected override async Task LoadData(NavigationEventArgs e)
         {
-            //this.Peeps.Collection.Add(new Peep());
-
             // Get new users
             IMobileServiceTable<Peep> peepsTable = this._mobileServiceClient.GetTable<Peep>();
-            List<Peep> peeps = (await peepsTable.ReadAsync()).ToList();
+            List<Peep> peeps = new List<Peep>();    //(await peepsTable.ReadAsync()).ToList();
 
             foreach (var peep in peeps)
             {
@@ -74,63 +161,18 @@ namespace Rightpoint.Peeps.Client.ViewModels
             using (var client = new HttpClient())
             {
                 // Call config endpoint to get today's query parameters
-                //var args = GetConfigInfo(client).Result;
                 var args = string.Empty;
 
                 // Fetch users based on parameters 
-                var r = GetPeepsByArgs(client, args);
+                var r = await GetPeepsByArgs(client, args);
 
                 //Take no more than 30 from "old" set
                 peeps.AddRange(r.OrderBy(x => Guid.NewGuid()).Take(30 - peeps.Count).ToList());
             }
 
-            this.Peeps.Initialize(peeps.OrderBy(x=> Guid.NewGuid()).ToList());
-        }
+            this.Peeps.Initialize(peeps.OrderBy(x => Guid.NewGuid()).ToList());
 
-        private IEnumerable<Peep> GetPeepsByArgs(HttpClient client, string args)
-        {
-            var peeps = new List<Peep>();
-            var response = client.GetAsync(new Uri($"http://rp-peeps.azurewebsites.net/api/peeps?args={args}")).Result;
-
-            if (response.IsSuccessStatusCode)
-            {
-                try
-                {
-                    // interpret results
-                    var result = JsonConvert.DeserializeObject<Models.Peeps>(response.Content.ReadAsStringAsync().Result);
-
-                    foreach (var p in result.peeps)
-                    {
-                        peeps.Add(new Peep()
-                        {
-                            Name = p.name,
-                            Hometown = p.origin,
-                            Office = p.office,
-                            Team = p.serviceLine,
-                            ImageUrl = "http://rp-peeps.azurewebsites.net" + p.photoPath
-                        });
-                    }
-                }
-                catch(Exception ex)
-                {
-                    if(Debugger.IsAttached) Debugger.Break();
-                }
-            }
-
-            return peeps;
-        }
-
-        private async Task<PeepsFilter> GetConfigInfo(HttpClient client)
-        {
-            var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri("http://rp-peeps.azurewebsites.net/api/config"),
-            };
-
-            var response = await client.SendAsync(request);
-
-            throw new NotImplementedException();
+            Peeps.CollectionTimer.Tick += CollectionTimerOnTick;
         }
 
         public override void Cleanup()
@@ -139,13 +181,6 @@ namespace Rightpoint.Peeps.Client.ViewModels
 
             base.Cleanup();
         }
-
-        private void dispatcherTimer_Tick(object sender, object e)
-        {
-            var strDate = DigitalClock.DateFormatted;
-            var strTime = DigitalClock.TimeFormatted;
-
-            Debug.WriteLine(strTime);
-        }
+        #endregion
     }
 }
