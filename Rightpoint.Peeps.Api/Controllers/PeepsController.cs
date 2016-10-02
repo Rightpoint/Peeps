@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -20,16 +22,28 @@ namespace Rightpoint.Peeps.Api.Controllers
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public HttpResponseMessage Get([FromUri]string args)
+        public HttpResponseMessage Get([FromUri]string[] args)
         {
             var appData = HttpContext.Current.ApplicationInstance.Server.MapPath("~/App_Data");
             string file = Path.Combine(appData, Constants.PeepsFile);
 
             using (var sr = new StreamReader(file))
             {
+                ICollection<Peep> peepsByArgs;
                 var result = JsonConvert.DeserializeObject<Company>(sr.ReadToEnd());
 
-                return Request.CreateResponse(HttpStatusCode.OK, result);
+                if (args.Length > 0)
+                {
+                    //TODO filter by args
+                }
+
+                // Randomize order and return no more than 50 peeps
+                peepsByArgs = result.Peeps.OrderBy(x => Guid.NewGuid()).Take(50).ToList();
+
+                return Request.CreateResponse(HttpStatusCode.OK, new Company()
+                {
+                    Peeps = peepsByArgs
+                });
             }
         }
 

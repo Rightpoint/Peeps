@@ -8,6 +8,9 @@
     <Application.Resources>
         <ResourceDictionary>
             <converters:ByteArrayToImageConverter x:Key="ByteArrayToImageConverter" />
+            <converters:FaceLandmarkToWidthConverter x:Key="LandmarkToWidthConverter" />
+            <converters:FaceLandmarkToHeightConverter x:Key="LandmarkToHeightConverter" />
+            <converters:FaceToVisibillityConverter x:Key="FaceToVisibillityConverter" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Theme/Base.xaml"/>
                 <ResourceDictionary Source="/Theme/Brushes.xaml"/>

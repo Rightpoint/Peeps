@@ -37,14 +37,14 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Aditya\tMehra",
+      "name": "Aditya Mehra",
       "office": "Chicago",
       "serviceLine": "Project Management",
       "photo": "Aditya Mehra.JPG",
       "origin": "Rightpoint"
     },
     {
-      "name": "Adrian\tWidjaja",
+      "name": "Adrian Widjaja",
       "office": "Chicago",
       "serviceLine": "Salesforce",
       "photo": "Adrian Widjaja.jpg",
@@ -433,13 +433,6 @@
       "office": "Chicago",
       "serviceLine": "Visual Design",
       "photo": "Gina Lee.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Greg Ostrowski",
-      "office": "Chicago",
-      "serviceLine": "App Dev",
-      "photo": "Greg Ostrowski.JPG",
       "origin": "Rightpoint"
     },
     {

@@ -160,8 +160,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Company.cs" />
-    <Compile Include="Models\Peep.cs" />
+    <Compile Include="Controllers\Models\Company.cs" />
+    <Compile Include="Controllers\Models\Peep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -205,7 +205,6 @@
     <Content Include="Content\Images\Brandon Rozelle.jpg" />
     <Content Include="Content\Images\Brendan Pugh.jpg" />
     <Content Include="Content\Images\Brennen Cage.jpg" />
-    <Content Include="Content\Images\Brian Bennewitz.gif" />
     <Content Include="Content\Images\Brian Bennewitz.jpg" />
     <Content Include="Content\Images\Brian Hulse.JPG" />
     <Content Include="Content\Images\Bryan Bruno.jpg" />

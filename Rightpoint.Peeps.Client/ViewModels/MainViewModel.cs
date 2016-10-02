@@ -12,7 +12,7 @@ using System.Net;
 using System.Net.Http;
 using Windows.Foundation;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI.Xaml.Controls;
 using Microsoft.ProjectOxford.Face;
 using Microsoft.ProjectOxford.Face.Contract;
 using Newtonsoft.Json;
@@ -21,7 +21,7 @@ namespace Rightpoint.Peeps.Client.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly IFaceServiceClient _faceServiceClient = new FaceServiceClient("key goes here");
+        private readonly IFaceServiceClient _faceServiceClient = new FaceServiceClient("Key goes here");
         private readonly IMobileServiceClient _mobileServiceClient;        
 
         public DynamicCollection<Peep> Peeps { get; set; } = new DynamicCollection<Peep>();
@@ -102,7 +102,7 @@ namespace Rightpoint.Peeps.Client.ViewModels
                 {
                     var img = "http://rp-peeps.azurewebsites.net" + p.photoPath;
 
-                    var face = await _faceServiceClient.DetectAsync(img);
+                    var face = await _faceServiceClient.DetectAsync(img, false, true, new List<FaceAttributeType>() { FaceAttributeType.FacialHair });
 
                     //TODO transform rectangle based on size of image?
 
@@ -116,16 +116,22 @@ namespace Rightpoint.Peeps.Client.ViewModels
                         Face = face.FirstOrDefault()
                     };
 
-                    if (peep.Face == null) continue;
+                    // Ensure no double-stache
+                    if (peep.Face?.FaceAttributes != null)
+                    {
+                        if (peep.Face.FaceAttributes.FacialHair.Beard > 0.75 ||
+                            peep.Face.FaceAttributes.FacialHair.Moustache > 0.75)
+                            peep.Face = null;
+                    }
 
                     peeps.Add(peep);
-                    Debug.WriteLine($"Added {peep.Name}!");                    
+                    Debug.WriteLine($"Added {peep.Name}!");
                 }
                 catch (FaceAPIException ex)
                 {
                     Debug.WriteLine($"{ex.ErrorCode}: {ex.ErrorMessage}");
 
-                    return peeps;
+                    // Assumes "Limit Reached" exception
                     await Task.Delay(10000);
                 }
                 catch (Exception ex)

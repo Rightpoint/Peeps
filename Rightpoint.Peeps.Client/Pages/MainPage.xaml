@@ -13,19 +13,39 @@
             <StackPanel Orientation="Horizontal">
                 <Canvas Width="400">
                     <!-- API Images -->
-                    <Image Source="{Binding ImageUrl}" Stretch="UniformToFill" HorizontalAlignment="Center"/>
+                    <Image Source="{Binding ImageUrl}" Stretch="UniformToFill" HorizontalAlignment="Center" MinHeight="400" MaxWidth="400"/>
 
-                    <!-- Decoratiom -->
-                    <Image DataContext="{Binding Face.FaceRectangle}" 
-                           Source="../Assets/Decoration/m1.png"
-                           MinWidth="{Binding Width}" 
-                           MaxWidth="{Binding Width}"
-                           MinHeight="{Binding Height}"
-                           MaxHeight="{Binding Height}">
-                        <Image.RenderTransform>
-                            <TranslateTransform X="{Binding Left}" Y="{Binding Top}"/>
-                        </Image.RenderTransform>
-                    </Image>
+                    <Rectangle DataContext="{Binding Face.FaceRectangle}"
+                               MinWidth="{Binding Width}" 
+                               MaxWidth="{Binding Width}"
+                               MinHeight="{Binding Height}"
+                               MaxHeight="{Binding Height}"
+                               Stroke="BlueViolet"
+                               StrokeThickness="2"
+                               Canvas.Left="{Binding Left}"
+                               Canvas.Top="{Binding Top}"
+                               Visibility="Collapsed"/>
+                    <Rectangle DataContext="{Binding Face}"
+                               MinWidth="{Binding FaceLandmarks, Converter={StaticResource LandmarkToWidthConverter}}" 
+                               MaxWidth="{Binding FaceLandmarks, Converter={StaticResource LandmarkToWidthConverter}}" 
+                               MinHeight="{Binding FaceLandmarks, Converter={StaticResource LandmarkToHeightConverter}}" 
+                               MaxHeight="{Binding FaceLandmarks, Converter={StaticResource LandmarkToHeightConverter}}" 
+                               Stroke="Aquamarine"
+                               StrokeThickness="2"
+                               Canvas.Top="{Binding FaceLandmarks.NoseTip.Y}"
+                               Canvas.Left="{Binding FaceLandmarks.MouthLeft.X}"
+                               Visibility="Collapsed"/>
+                    
+                    <!-- Decoration -->
+                    <Image MinWidth="{Binding Face.FaceLandmarks, Converter={StaticResource LandmarkToWidthConverter}}" 
+                           MaxWidth="{Binding Face.FaceLandmarks, Converter={StaticResource LandmarkToWidthConverter}}" 
+                           MinHeight="{Binding Face.FaceLandmarks, Converter={StaticResource LandmarkToHeightConverter}}" 
+                           MaxHeight="{Binding Face.FaceLandmarks, Converter={StaticResource LandmarkToHeightConverter}}" 
+                           Visibility="{Binding Face, Converter={StaticResource FaceToVisibillityConverter}}"
+                           Canvas.Top="{Binding Face.FaceLandmarks.NoseTip.Y}"
+                           Canvas.Left="{Binding Face.FaceLandmarks.MouthLeft.X}"
+                           Stretch="Uniform"
+                           Source="../Assets/Decoration/m1.png"/>
 
                     <!-- New Hires -->
                     <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="None" HorizontalAlignment="Left"/>
@@ -38,6 +58,13 @@
                         <Run Text="{Binding Team}"/>
                     </TextBlock>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Office}"/>
+                    
+                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" 
+                               Text="{Binding Face.FaceLandmarks, Converter={StaticResource LandmarkToWidthConverter}}"
+                               Visibility="Collapsed"/>
+                    <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" 
+                               Text="{Binding Face.FaceLandmarks, Converter={StaticResource LandmarkToHeightConverter}}"
+                               Visibility="Collapsed"/>
                 </StackPanel>
             </StackPanel>
         </DataTemplate>

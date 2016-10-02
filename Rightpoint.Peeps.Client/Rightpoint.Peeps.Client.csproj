@@ -125,6 +125,9 @@
     </Compile>
     <Compile Include="BasicDigitalClock.cs" />
     <Compile Include="Converters\ByteArrayToImageConverter.cs" />
+    <Compile Include="Converters\FaceLandmarkToHeightConverter.cs" />
+    <Compile Include="Converters\FaceLandmarkToWidthConverter.cs" />
+    <Compile Include="Converters\FaceToVisibillityConverter.cs" />
     <Compile Include="DI\UnityContainerFactory.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Infrastructure\PeepsMobileServiceClient.cs" />

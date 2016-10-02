@@ -50,4 +50,7 @@
     <SolidColorBrush x:Key="SemiTransparentRpOrange" Color="#D5441C" Opacity=".7"/>
     <SolidColorBrush x:Key="SemiTransparentRpSteel" Color="#a2968a" Opacity=".7"/>
 
+    <ImageBrush x:Key="MoustacheBrush" ImageSource="ms-appx:///Assets/Decoration/m1.png" Stretch="Uniform"/>
+
+
 </ResourceDictionary>
