@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -21,7 +22,8 @@ namespace Rightpoint.Peeps.Client.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly IFaceServiceClient _faceServiceClient = new FaceServiceClient("d140400048454d7383f1345202d797ba");
+        private readonly ResourceLoader _resource = new ResourceLoader();
+        private readonly IFaceServiceClient _faceServiceClient;
         private readonly IMobileServiceClient _mobileServiceClient;        
 
         public DynamicCollection<Peep> Peeps { get; set; } = new DynamicCollection<Peep>();
@@ -57,6 +59,8 @@ namespace Rightpoint.Peeps.Client.ViewModels
             refreshTimer.Tick += RefreshTimerOnTick;
             refreshTimer.Interval = new TimeSpan(0, 24, 0, 0);
             refreshTimer.Start();
+
+            _faceServiceClient = new FaceServiceClient(_resource.GetString("api_key"));
         }
 
         private async void CollectionTimerOnTick(object sender, object o)

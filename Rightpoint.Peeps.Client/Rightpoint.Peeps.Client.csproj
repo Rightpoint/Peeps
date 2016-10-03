@@ -117,6 +117,7 @@
     <Content Include="Fonts\KulturistaThin.otf" />
     <Content Include="Fonts\ValuesMedium.ttf" />
     <None Include="project.json" />
+    <PRIResource Include="Resources.resw" />
     <None Include="Service References\Application Insights\ConnectedService.json" />
   </ItemGroup>
   <ItemGroup>
