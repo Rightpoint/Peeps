@@ -11,6 +11,7 @@
             <converters:FaceLandmarkToWidthConverter x:Key="LandmarkToWidthConverter" />
             <converters:FaceLandmarkToHeightConverter x:Key="LandmarkToHeightConverter" />
             <converters:FaceToVisibillityConverter x:Key="FaceToVisibillityConverter" />
+            <converters:CountZeroValueConverter x:Key="CountIsZeroValueConverter" />
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Theme/Base.xaml"/>
                 <ResourceDictionary Source="/Theme/Brushes.xaml"/>

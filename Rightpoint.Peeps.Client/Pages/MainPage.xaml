@@ -35,7 +35,7 @@
                                Canvas.Top="{Binding FaceLandmarks.NoseTip.Y}"
                                Canvas.Left="{Binding FaceLandmarks.MouthLeft.X}"
                                Visibility="Collapsed"/>
-                    
+
                     <!-- Decoration -->
                     <Image MinWidth="{Binding Face.FaceLandmarks, Converter={StaticResource LandmarkToWidthConverter}}" 
                            MaxWidth="{Binding Face.FaceLandmarks, Converter={StaticResource LandmarkToWidthConverter}}" 
@@ -58,7 +58,7 @@
                         <Run Text="{Binding Team}"/>
                     </TextBlock>
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" Text="{Binding Office}"/>
-                    
+
                     <TextBlock Style="{StaticResource Subheading}" Foreground="{StaticResource OffWhite}" 
                                Text="{Binding Face.FaceLandmarks, Converter={StaticResource LandmarkToWidthConverter}}"
                                Visibility="Collapsed"/>
@@ -111,7 +111,9 @@
                         <Setter Target="PeepsStamp.(RelativePanel.AlignRightWithPanel)" Value="True"/>
 
                         <Setter Target="PeepsTime.(RelativePanel.AlignVerticalCenterWith)" Value="PeepsStamp"/>
-                        
+
+                        <Setter Target="PeepsFrame.MinWidth" Value="1020"/>
+
                     </VisualState.Setters>
                 </VisualState>
 
@@ -154,6 +156,13 @@
                           SelectedItem="{Binding Path=Peeps.CurrentItem, Mode=TwoWay}" 
                           SelectedIndex="{Binding Path=Peeps.CurrentIndex, Mode=TwoWay}" />
             </Frame>
+
+            <!--<ProgressRing IsActive="{Binding Path=Peeps.Collection, Converter={StaticResource CountIsZeroValueConverter}}" 
+                          Foreground="{StaticResource OffWhite}"
+                          MinHeight="200"
+                          MinWidth="200"
+                          RelativePanel.AlignHorizontalCenterWithPanel="True" 
+                          RelativePanel.AlignVerticalCenterWithPanel="True"/>-->
 
             <Grid x:Name="PeepsStamp" Padding="10" >
                 <Image Source="../Assets/peeps_stamp.png" Height="140" Width="140"/>

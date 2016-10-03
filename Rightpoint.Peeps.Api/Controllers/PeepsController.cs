@@ -38,7 +38,7 @@ namespace Rightpoint.Peeps.Api.Controllers
                 }
 
                 // Randomize order and return no more than 50 peeps
-                peepsByArgs = result.Peeps.OrderBy(x => Guid.NewGuid()).Take(50).ToList();
+                peepsByArgs = result.Peeps.OrderBy(x => Guid.NewGuid()).Take(30).ToList();
 
                 return Request.CreateResponse(HttpStatusCode.OK, new Company()
                 {

@@ -21,7 +21,7 @@ namespace Rightpoint.Peeps.Client.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {
-        private readonly IFaceServiceClient _faceServiceClient = new FaceServiceClient("Key goes here");
+        private readonly IFaceServiceClient _faceServiceClient = new FaceServiceClient("d140400048454d7383f1345202d797ba");
         private readonly IMobileServiceClient _mobileServiceClient;        
 
         public DynamicCollection<Peep> Peeps { get; set; } = new DynamicCollection<Peep>();
