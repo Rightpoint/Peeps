@@ -5,3 +5,6 @@
 /packages
 /Rightpoint.Peeps.*/bin
 /Rightpoint.Peeps.*/obj
+
+
+*.resw
