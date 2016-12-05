@@ -106,10 +106,6 @@ namespace Rightpoint.Peeps.Client.ViewModels
                 {
                     var img = "http://rp-peeps.azurewebsites.net" + p.photoPath;
 
-                    var face = await _faceServiceClient.DetectAsync(img, false, true, new List<FaceAttributeType>() { FaceAttributeType.FacialHair });
-
-                    //TODO transform rectangle based on size of image?
-
                     var peep = new Peep()
                     {
                         Name = p.name,
@@ -117,8 +113,12 @@ namespace Rightpoint.Peeps.Client.ViewModels
                         Office = p.office,
                         Team = p.serviceLine,
                         ImageUrl = img,
-                        Face = face.FirstOrDefault()
                     };
+
+                    /* // Uncomment these lines to show moustache 
+                    var face = await _faceServiceClient.DetectAsync(img, false, true, new List<FaceAttributeType>() { FaceAttributeType.FacialHair });
+                    peep.Face = face.FirstOrDefault();
+                    */
 
                     // Ensure no double-stache
                     if (peep.Face?.FaceAttributes != null)
@@ -149,10 +149,10 @@ namespace Rightpoint.Peeps.Client.ViewModels
 
         private void dispatcherTimer_Tick(object sender, object e)
         {
-            //var strDate = DigitalClock.DateFormatted;
-            //var strTime = DigitalClock.TimeFormatted;
+            var strDate = DigitalClock.DateFormatted;
+            var strTime = DigitalClock.TimeFormatted;
 
-            //Debug.WriteLine(strTime);
+            Debug.WriteLine(strTime);
         }
 
         #region Override

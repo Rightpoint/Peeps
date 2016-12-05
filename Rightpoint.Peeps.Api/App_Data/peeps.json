@@ -247,13 +247,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Chris Leporini",
-      "office": "Chicago",
-      "serviceLine": "Content Strategy",
-      "photo": "Chris Leporini.JPG",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Chris Miller",
       "office": "Chicago",
       "serviceLine": "Business Development",
@@ -562,13 +555,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Jimmy Hopton",
-      "office": "Chicago",
-      "serviceLine": "Visual Design",
-      "photo": "Jimmy Hopton.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Joaquin Grimaldo",
       "office": "Chicago",
       "serviceLine": "Visual Design",
@@ -769,20 +755,6 @@
       "office": "Chicago",
       "serviceLine": "Delivery Support/HR",
       "photo": "Lauren Berkowitz.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Lauren Helwig",
-      "office": "Detroit",
-      "serviceLine": "User Experience",
-      "photo": "Lauren Helwig.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Leslie Gestautas",
-      "office": "Chicago",
-      "serviceLine": "Salesforce",
-      "photo": "Leslie Gaustautas.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -1736,13 +1708,6 @@
       "office": "Boston",
       "serviceLine": "Co-founder",
       "photo": "Nick Laidlaw.jpg",
-      "origin": "Oasis"
-    },
-    {
-      "name": "Paschall Freeman",
-      "office": "Boston",
-      "serviceLine": "CMS",
-      "photo": "Paschall Freeman.jpg",
       "origin": "Oasis"
     },
     {
