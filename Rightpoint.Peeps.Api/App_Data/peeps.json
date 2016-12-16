@@ -135,13 +135,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Anne Petersen",
-      "office": "Chicago",
-      "serviceLine": "User Experience",
-      "photo": "Anne Petersen.JPG",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Austin Smith",
       "office": "Chicago",
       "serviceLine": "Visual Design",
@@ -989,13 +982,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Paul McAleer",
-      "office": "Denver",
-      "serviceLine": "User Experience",
-      "photo": "Paul McAleer.JPG",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Pernilla Peterson",
       "office": "Chicago",
       "serviceLine": "Visual Design",
@@ -1014,13 +1000,6 @@
       "office": "Chicago",
       "serviceLine": "App Dev",
       "photo": "Peter Clark.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Peter O'Connell",
-      "office": "Chicago",
-      "serviceLine": "Salesforce",
-      "photo": "Peter OConnell.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -1070,13 +1049,6 @@
       "office": "Detroit",
       "serviceLine": "App Dev",
       "photo": "Rich Grenwick.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Robin Schaffer",
-      "office": "Denver",
-      "serviceLine": "Business Development",
-      "photo": "Robin Schaffer.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -1568,13 +1540,6 @@
       "office": "Jaipur, India",
       "serviceLine": "CMS",
       "photo": "Kapil Trivedi.jpg",
-      "origin": "Oasis"
-    },
-    {
-      "name": "Keith Murphy",
-      "office": "Boston",
-      "serviceLine": "CMS",
-      "photo": "Keith Murphy.jpg",
       "origin": "Oasis"
     },
     {

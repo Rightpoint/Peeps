@@ -14100,7 +14100,7 @@
       ]
     },
     "Microsoft.ProjectOxford.Face/1.2.1.2": {
-      "sha512": "GFYgmoMCkUKvT9OIAl6koD9g203A5lfCWTkuVZ/4foL6lnIcA9/uIjnGlr9aTvW1xC+tFfBnq9L/ZbYF3fpOgg==",
+      "sha512": "PMhyyX0efSm/9zfItxVsfR+FMzIoIQz7HUFHHFf4hDnj2BcMXtb+hqebH5TnALR/fNn7x+1Ufmokhw97W2ICiw==",
       "type": "package",
       "path": "Microsoft.ProjectOxford.Face/1.2.1.2",
       "files": [
@@ -17240,7 +17240,7 @@
       ]
     },
     "WindowsAzure.MobileServices/1.3.2": {
-      "sha512": "HAqJ6WFi731fTaG7U4tYnD3eb/ElH+ksdb41i4+5qJhxmC//UErKUalRSJ5rSRSkKcDPxEkz94pMNZwy9OKJAQ==",
+      "sha512": "suP1sgVBLOWp4xitpPQvUOrKqotGNIyqq3JJymBNAL3kA+DcW1FNXMs4KxFHuwa56GJaeCHBrHurqjvjbbUklQ==",
       "type": "package",
       "path": "WindowsAzure.MobileServices/1.3.2",
       "files": [
