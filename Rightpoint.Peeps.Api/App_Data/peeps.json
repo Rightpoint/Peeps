@@ -107,13 +107,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Andre Figueroa",
-      "office": "Chicago",
-      "serviceLine": "Cloud and Infrastructure",
-      "photo": "Andre Figueroa.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Andrew Varnon",
       "office": "Chicago",
       "serviceLine": "App Dev",
@@ -284,15 +277,8 @@
     {
       "name": "Craig Browder",
       "office": "Chicago",
-      "serviceLine": "App Dev",
+      "serviceLine": "Managed Services",
       "photo": "CraigBrowder.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Craig Gadberry",
-      "office": "Chicago",
-      "serviceLine": "Business Development",
-      "photo": "Craig Gadberry.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -333,7 +319,7 @@
     {
       "name": "David Snuckel",
       "office": "Detroit",
-      "serviceLine": "Cloud and Infrastructure",
+      "serviceLine": "Managed Services",
       "photo": "Dave Snuckel.jpg",
       "origin": "Rightpoint"
     },
@@ -349,13 +335,6 @@
       "office": "Detroit",
       "serviceLine": "App Dev",
       "photo": "Derek Gusoff.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Derek Poppink",
-      "office": "Detroit",
-      "serviceLine": "User Experience",
-      "photo": "Derek Poppink.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -451,7 +430,7 @@
     },
     {
       "name": "Jason Abrams",
-      "office": "Chicago",
+      "office": "Denver",
       "serviceLine": "Project Management",
       "photo": "Jason Abrams.jpg",
       "origin": "Rightpoint"
@@ -697,7 +676,7 @@
     {
       "name": "Khader Abdul",
       "office": "Chicago",
-      "serviceLine": "App Dev",
+      "serviceLine": "SharePoint",
       "photo": "Khader Abdul.jpg",
       "origin": "Rightpoint"
     },
@@ -907,7 +886,7 @@
     {
       "name": "Nathaniel Emerick",
       "office": "Chicago",
-      "serviceLine": "Project Management",
+      "serviceLine": "Account Management",
       "photo": "Nathaniel Emerick.JPG",
       "origin": "Rightpoint"
     },
@@ -1040,7 +1019,7 @@
     {
       "name": "Rejaie Johnson",
       "office": "Denver",
-      "serviceLine": "App Dev",
+      "serviceLine": "CMS",
       "photo": "Rajaie Johnson.jpg",
       "origin": "Rightpoint"
     },
@@ -1077,13 +1056,6 @@
       "office": "Chicago",
       "serviceLine": "App Dev",
       "photo": "Sanjeev Karmacharya.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Sarah Derry",
-      "office": "Chicago",
-      "serviceLine": "Marketing",
-      "photo": "SarahDerry.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -1257,7 +1229,7 @@
     {
       "name": "Zach Quinn",
       "office": "Chicago",
-      "serviceLine": "Cloud and Infrastructure",
+      "serviceLine": "Managed Services",
       "photo": "Zach Quinn.jpg",
       "origin": "Rightpoint"
     },
@@ -1312,13 +1284,6 @@
       "origin": "Oasis"
     },
     {
-      "name": "Carolina Coviello",
-      "office": "Los Angeles",
-      "serviceLine": "Strategy & User Experience",
-      "photo": "Carolina Coviello.jpg",
-      "origin": "Oasis"
-    },
-    {
       "name": "Cassi Pires",
       "office": "Los Angeles",
       "serviceLine": "Account Management",
@@ -1351,13 +1316,6 @@
       "office": "Boston",
       "serviceLine": "CMS",
       "photo": "Chris Daly.jpg",
-      "origin": "Oasis"
-    },
-    {
-      "name": "Craig Kublin",
-      "office": "Boston",
-      "serviceLine": "Production",
-      "photo": "Craig Kublin.jpg",
       "origin": "Oasis"
     },
     {
@@ -1453,7 +1411,7 @@
     },
     {
       "name": "Greg Rice",
-      "office": "Los Angeles",
+      "office": "Atlanta",
       "serviceLine": "Sales",
       "photo": "Greg Rice.jpg",
       "origin": "Oasis"
@@ -1566,7 +1524,7 @@
     {
       "name": "Lisa Poirier",
       "office": "Boston",
-      "serviceLine": "Production",
+      "serviceLine": "Delivery Excellence",
       "photo": "Lisa Poirier.jpg",
       "origin": "Oasis"
     },
@@ -1596,13 +1554,6 @@
       "office": "Boston",
       "serviceLine": "Sales",
       "photo": "Mark Abbott.jpg",
-      "origin": "Oasis"
-    },
-    {
-      "name": "Mark Graber",
-      "office": "Boston",
-      "serviceLine": "CMS",
-      "photo": "Mark Graber.jpg",
       "origin": "Oasis"
     },
     {
