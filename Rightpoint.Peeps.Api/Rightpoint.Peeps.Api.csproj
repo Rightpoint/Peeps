@@ -525,7 +525,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <None Include="Properties\PublishProfiles\rp-peeps - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\rp-peeps - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\rp-peeps - Web Deploy.pubxml" />
   </ItemGroup>
   <ItemGroup />
