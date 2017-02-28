@@ -128,13 +128,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Austin Smith",
-      "office": "Chicago",
-      "serviceLine": "Visual Design",
-      "photo": "Austin Smith.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Austin Strajack",
       "office": "Chicago",
       "serviceLine": "Business Development",
@@ -1154,13 +1147,6 @@
       "office": "Chicago",
       "serviceLine": "Salesforce",
       "photo": "Steven Schnorr.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Suman Kamath",
-      "office": "Denver",
-      "serviceLine": "Project Management",
-      "photo": "Suman Kamath.jpg",
       "origin": "Rightpoint"
     },
     {
