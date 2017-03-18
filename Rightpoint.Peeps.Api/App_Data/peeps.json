@@ -58,13 +58,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Aleksandr Zebrov",
-      "office": "Chicago",
-      "serviceLine": "Managed Services",
-      "photo": "Alex Zebrov.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Alex Swarthout",
       "office": "Chicago",
       "serviceLine": "Delivery Support/Operations",
@@ -1253,13 +1246,6 @@
       "office": "Boston",
       "serviceLine": "Account Management",
       "photo": "Christina Hunchard.jpg",
-      "origin": "Oasis"
-    },
-    {
-      "name": "Christopher Daly",
-      "office": "Boston",
-      "serviceLine": "CMS",
-      "photo": "Chris Daly.jpg",
       "origin": "Oasis"
     },
     {
