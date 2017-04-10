@@ -219,13 +219,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Chris Miller",
-      "office": "Chicago",
-      "serviceLine": "Business Development",
-      "photo": "Chris Miller.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Chris Niemyjski",
       "office": "Chicago",
       "serviceLine": "Content Strategy",
@@ -297,7 +290,7 @@
     },
     {
       "name": "David Snuckel",
-      "office": "Detroit",
+      "office": "Chicago",
       "serviceLine": "Managed Services",
       "photo": "Dave Snuckel.jpg",
       "origin": "Rightpoint"
@@ -779,13 +772,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Melissa Leffin",
-      "office": "Chicago",
-      "serviceLine": "Change Management",
-      "photo": "Melissa Leffin.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Melissa Paris",
       "office": "Chicago",
       "serviceLine": "Project Management",
@@ -993,13 +979,6 @@
       "office": "Chicago",
       "serviceLine": "App Dev",
       "photo": "Sanjeev Karmacharya.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Sarah Umber",
-      "office": "Chicago",
-      "serviceLine": "Delivery Support/HR",
-      "photo": "Sarah Umber.JPG",
       "origin": "Rightpoint"
     },
     {

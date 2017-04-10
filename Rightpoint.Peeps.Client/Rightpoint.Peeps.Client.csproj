@@ -17,12 +17,14 @@
     <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <PackageCertificateKeyFile>Rightpoint.Peeps.Client_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>
+    </PackageCertificateKeyFile>
     <ApplicationInsightsResourceId>/subscriptions/76d210f9-5d7b-4875-b92a-1267ab071303/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/Rightpoint.Peeps.Client</ApplicationInsightsResourceId>
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxPackageDir>C:\Users\jmeyer\Downloads\Peeps\</AppxPackageDir>
     <AppxBundlePlatforms>arm</AppxBundlePlatforms>
     <AppxBundle>Always</AppxBundle>
+    <PackageCertificateThumbprint>2A8DD5A0608BEAAC03332FF969D2D2F8E1E3DBC4</PackageCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
     <DebugSymbols>true</DebugSymbols>
@@ -102,6 +104,7 @@
     <Content Include="Assets\Decoration\m1.png" />
     <Content Include="Assets\Decoration\m2.png" />
     <Content Include="Assets\Decoration\m3.png" />
+    <Content Include="Assets\OS365_poster_2.png" />
     <Content Include="Assets\peeps_stamp.png" />
     <Content Include="Assets\people_splash.png" />
     <Content Include="Assets\Square310x310Logo.scale-200.png" />

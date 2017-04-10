@@ -45,6 +45,7 @@
     <!-- Background Images-->
     <ImageBrush x:Key="ApplicationPageBackgroundThemeBrush" ImageSource="ms-appx:///Assets/people_splash.png" Stretch="UniformToFill"/>
     <ImageBrush x:Key="DefaultBackgroundBrush" ImageSource="ms-appx:///Assets/people_splash.png" Stretch="UniformToFill"/>
+    <ImageBrush x:Key="RebrandBackgroundBrush" ImageSource="ms-appx:///Assets/OS365_poster_2.png" Stretch="UniformToFill"/>
     <SolidColorBrush x:Key="SemiTransparentBlack" Color="#000000" Opacity=".3"/>
     <SolidColorBrush x:Key="SemiTransparentNotBlack" Color="#373739" Opacity=".7"/>
     <SolidColorBrush x:Key="SemiTransparentRpOrange" Color="#D5441C" Opacity=".7"/>

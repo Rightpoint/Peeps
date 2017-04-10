@@ -1,3 +1,3 @@
-MainPackage=C:\_GIT\Peeps\Rightpoint.Peeps.Client\bin\ARM\Debug\Rightpoint.Peeps.Client_2.0.1.0_ARM_Debug.appx
-SymbolPackage=C:\Users\jmeyer\Downloads\Peeps\Rightpoint.Peeps.Client_2.0.1.0_Debug_Test\Rightpoint.Peeps.Client_2.0.1.0_ARM_Debug.appxsym
-ResourcePack=C:\_GIT\Peeps\Rightpoint.Peeps.Client\bin\ARM\Debug\Rightpoint.Peeps.Client_2.0.1.0_scale-100.appx
+MainPackage=C:\_GIT\RPT - Peeps\Rightpoint.Peeps.Client\bin\ARM\Debug\Rightpoint.Peeps.Client_2.0.2.0_ARM_Debug.appx
+SymbolPackage=C:\Users\jmeyer\Downloads\Peeps\Rightpoint.Peeps.Client_2.0.2.0_Debug_Test\Rightpoint.Peeps.Client_2.0.2.0_ARM_Debug.appxsym
+ResourcePack=C:\_GIT\RPT - Peeps\Rightpoint.Peeps.Client\bin\ARM\Debug\Rightpoint.Peeps.Client_2.0.2.0_scale-100.appx
