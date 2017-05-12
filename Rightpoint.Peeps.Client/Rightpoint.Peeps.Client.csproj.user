@@ -4,20 +4,21 @@
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>
     <UseEmulator>false</UseEmulator>
     <RemoteDebugEnabled>true</RemoteDebugEnabled>
-    <RemoteDebugMachine>10.10.2.131</RemoteDebugMachine>
+    <RemoteDebugMachine>rpcrpi01.local:8116</RemoteDebugMachine>
     <UseAuthentication>false</UseAuthentication>
     <CreateCleanLayout>false</CreateCleanLayout>
-    <AuthenticationMode>Universal</AuthenticationMode>
+    <AuthenticationMode>None</AuthenticationMode>
   </PropertyGroup>
   <PropertyGroup>
     <AppxPackageIsForStore>False</AppxPackageIsForStore>
     <AppxShowAllApps>False</AppxShowAllApps>
     <AppxBuildConfigurationSelection>arm</AppxBuildConfigurationSelection>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
+    <PackageOptionalProjectsInIdeBuilds>False</PackageOptionalProjectsInIdeBuilds>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <RemoteDebugMachine>rpcrpi02</RemoteDebugMachine>
-    <RemoteDebugEnabled>true</RemoteDebugEnabled>
+    <RemoteDebugEnabled>false</RemoteDebugEnabled>
     <UseAuthentication>false</UseAuthentication>
     <CreateCleanLayout>true</CreateCleanLayout>
     <DeviceId>30F105C9-681E-420b-A277-7C086EAD8A4E</DeviceId>

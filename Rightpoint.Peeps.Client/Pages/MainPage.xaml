@@ -75,7 +75,7 @@
                 <Image Source="{Binding ImageUrl}" Stretch="UniformToFill" HorizontalAlignment="Center"/>
                 <Image Source="{Binding Path=ImageBytes, Converter={StaticResource ByteArrayToImageConverter}}" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-                <!-- Decoratiom -->
+                <!-- Decoration -->
                 <!--<Rectangle DataContext="{Binding Face.FaceRectangle}" Stroke="Chartreuse" StrokeThickness="2"  MinWidth="{Binding Width}" MinHeight="{Binding Height}"></Rectangle>-->
 
                 <StackPanel Padding="15,10" VerticalAlignment="Bottom" Background="{StaticResource SemiTransparentBlack}">

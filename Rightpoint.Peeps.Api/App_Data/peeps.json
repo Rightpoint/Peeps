@@ -1235,13 +1235,6 @@
       "origin": "Oasis"
     },
     {
-      "name": "David Tranytos",
-      "office": "Dallas",
-      "serviceLine": "CMS",
-      "photo": "David Tranytos.jpg",
-      "origin": "Oasis"
-    },
-    {
       "name": "Deepa Shanmugasundaram",
       "office": "Dallas",
       "serviceLine": "CMS",
@@ -1659,6 +1652,14 @@
       "office": "Boston",
       "serviceLine": "Solution Area",
       "photo": "Wendy Karlyn.jpg",
+      "origin": "Oasis"
+    },
+    // Added 05/05/2017
+    {
+      "name": "Christiana Henry",
+      "office": "Chicago",
+      "serviceLine": "Marketing",
+      "photo": "Christiana Henry.jpg",
       "origin": "Oasis"
     }
   ]
