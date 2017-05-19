@@ -177,13 +177,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Brennen Cage",
-      "office": "Chicago",
-      "serviceLine": "App Dev",
-      "photo": "Brennen Cage.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Brian Bennewitz",
       "office": "Chicago",
       "serviceLine": "App Dev",
@@ -464,13 +457,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Jesse Wilbur",
-      "office": "Chicago",
-      "serviceLine": "User Experience",
-      "photo": "Jesse Wilbur.jpg",
-      "origin": "Rightpoint"
-    },
-    {
       "name": "Jilla Malek",
       "office": "Chicago",
       "serviceLine": "User Experience",
@@ -664,13 +650,6 @@
       "office": "Chicago",
       "serviceLine": "Salesforce",
       "photo": "Laraib Jafri.jpg",
-      "origin": "Rightpoint"
-    },
-    {
-      "name": "Laurel Petty",
-      "office": "Chicago",
-      "serviceLine": "Visual Design",
-      "photo": "Laurel Petty.jpg",
       "origin": "Rightpoint"
     },
     {
@@ -1298,13 +1277,6 @@
       "origin": "Oasis"
     },
     {
-      "name": "Greg Rice",
-      "office": "Atlanta",
-      "serviceLine": "Business Development",
-      "photo": "Greg Rice.jpg",
-      "origin": "Oasis"
-    },
-    {
       "name": "Jagmohan Rathore",
       "office": "Jaipur, India",
       "serviceLine": "CMS",
@@ -1316,13 +1288,6 @@
       "office": "Boston",
       "serviceLine": "Account Management",
       "photo": "James Maconochie.jpg",
-      "origin": "Oasis"
-    },
-    {
-      "name": "Jamie Berman",
-      "office": "Dallas",
-      "serviceLine": "Account Management",
-      "photo": "Jamie Berman.jpg",
       "origin": "Oasis"
     },
     {
@@ -1654,13 +1619,174 @@
       "photo": "Wendy Karlyn.jpg",
       "origin": "Oasis"
     },
-    // Added 05/05/2017
+    // Added 05/19/2017
+    {
+      "name": "Mario Bonilla",
+      "office": "Dallas",
+      "serviceLine": "CMS",
+      "photo": "Mario Bonilla.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Kamal Jackson",
+      "office": "Chicago",
+      "serviceLine": "App dev",
+      "photo": "Kamal Jackson.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Olivier McNicoll",
+      "office": "Boston",
+      "serviceLine": "CMS",
+      "photo": "Olivier McNicoll.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Spencer Andrews",
+      "office": "Dallas",
+      "serviceLine": "Project Management",
+      "photo": "Spencer Andrews.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Derek Sojda",
+      "office": "Detroit",
+      "serviceLine": "Design and Strategy",
+      "photo": "Derek Sojda.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Lokesh Soni",
+      "office": "Jaipur",
+      "serviceLine": "CMS",
+      "photo": "Lokesh Soni.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Sergio Oritz",
+      "office": "Dallas",
+      "serviceLine": "Creative",
+      "photo": "Sergio Oritz.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Corey Miller",
+      "office": "Chicago",
+      "serviceLine": "App Dev",
+      "photo": "Corey Miller.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Robert Sylvester",
+      "office": "Atlanta",
+      "serviceLine": "CMS",
+      "photo": "Robert Sylvester.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Gaurav Garg",
+      "office": "Jaipur",
+      "serviceLine": "Salesforce",
+      "photo": "Gaurav Garg.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Sam Arseneault",
+      "office": "Detroit",
+      "serviceLine": "App Dev",
+      "photo": "Sam Arseneault.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Aneta Kostic",
+      "office": "Chicago",
+      "serviceLine": "App Dev",
+      "photo": "Aneta Kostic.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Brian Hudi",
+      "office": "Chicago",
+      "serviceLine": "App Dev",
+      "photo": "Brian Hudi.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Alex 'The Boomerang' Good",
+      "office": "Chicago",
+      "serviceLine": "App Dev",
+      "photo": "Alex Good.jpg",
+      "origin": ""
+    },
     {
       "name": "Christiana Henry",
       "office": "Chicago",
       "serviceLine": "Marketing",
       "photo": "Christiana Henry.jpg",
-      "origin": "Oasis"
+      "origin": ""
+    },
+    {
+      "name": "Sarah Achler",
+      "office": "Chicago",
+      "serviceLine": "Marketing",
+      "photo": "Sarah Achler.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Meggie Davis",
+      "office": "Boston",
+      "serviceLine": "Project Management",
+      "photo": "Meggie Davis.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Chirag Patel",
+      "office": "Los Angeles",
+      "serviceLine": "App Dev",
+      "photo": "Chirag Patel.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Erik Olson",
+      "office": "Chicago",
+      "serviceLine": "Management",
+      "photo": "Erik Olson.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Adam Devino",
+      "office": "Chicago",
+      "serviceLine": "Cloud",
+      "photo": "Adam Devino.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Melissa Hopp",
+      "office": "Chicago",
+      "serviceLine": "Finance",
+      "photo": "Melissa Hopp.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Rosalind Wills",
+      "office": "",
+      "serviceLine": "App Dev",
+      "photo": "Rosalind Wills.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Erika Pokraka",
+      "office": "Chicago",
+      "serviceLine": "Staffing",
+      "photo": "Erika Pokraka.jpg",
+      "origin": ""
+    },
+    {
+      "name": "Scot Morgan",
+      "office": "Detroit",
+      "serviceLine": "Creative",
+      "photo": "Scot Morgan.jpg",
+      "origin": ""
     }
   ]
 }
