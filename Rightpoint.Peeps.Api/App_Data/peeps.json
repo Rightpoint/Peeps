@@ -653,7 +653,7 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Lauren Berkowitz",
+      "name": "Lauren Bennett",
       "office": "Chicago",
       "serviceLine": "Delivery Support/HR",
       "photo": "Lauren Berkowitz.jpg",
@@ -1122,14 +1122,6 @@
       "origin": "Rightpoint"
     },
     {
-      "name": "Zachary Kelemen",
-      "office": "Chicago",
-      "serviceLine": "SharePoint",
-      "photo": "Zack Kelemen.jpg",
-      "origin": "Rightpoint"
-    },
-
-    {
       "name": "Allison Pitre",
       "office": "Boston",
       "serviceLine": "Delivery Support/Operations",
@@ -1218,13 +1210,6 @@
       "office": "Dallas",
       "serviceLine": "CMS",
       "photo": "Deepa Shanmugasundaram.jpg",
-      "origin": "Oasis"
-    },
-    {
-      "name": "Donal Casey",
-      "office": "Boston",
-      "serviceLine": "CMS",
-      "photo": "Donal Casey.jpg",
       "origin": "Oasis"
     },
     {
