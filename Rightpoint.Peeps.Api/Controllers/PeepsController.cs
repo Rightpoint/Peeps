@@ -12,11 +12,19 @@ using System.Web.Configuration;
 using System.Web.Http;
 using Newtonsoft.Json;
 using Rightpoint.Peeps.Api.Models;
+using Rightpoint.Peeps.Api.Services;
 
 namespace Rightpoint.Peeps.Api.Controllers
 {
     public class PeepsController : ApiController
     {
+        private GraphApiService service = new GraphApiService();
+
+        public PeepsController()
+        {
+
+        }
+
         /// <summary>
         /// TODO: get peeps by args
         /// </summary>
@@ -55,6 +63,20 @@ namespace Rightpoint.Peeps.Api.Controllers
         public string Get()
         {            
             return WebConfigurationManager.AppSettings["PeepsQuery"];
+        }
+
+        [Route("api/peeps/graph")]
+        public HttpResponseMessage GetFromGraph([FromUri]string[] args)
+        {
+            throw new NotImplementedException();
+
+            // TODO JM: Configure OAuth (App registration + flow)
+            var result = service.FetchUsers(null, 30).Result;
+
+            return Request.CreateResponse(HttpStatusCode.OK, new Company()
+            {
+                Peeps = result.ToList()
+            });
         }
 
         //[HttpGet]
