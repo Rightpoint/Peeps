@@ -6,6 +6,7 @@
 /Rightpoint.Peeps.*/bin
 /Rightpoint.Peeps.*/obj
 
-
+*.suo
 *.resw
 /Rightpoint.Peeps.Api/Properties/PublishProfiles
+/.vs
