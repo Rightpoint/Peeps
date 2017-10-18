@@ -255,3 +255,4 @@ paket-files/
 *.sln.iml
 /Components/Microsoft.Intune.MAM-1.1.0.0/samples
 
+/Righpoint.Peeps.Api/Web.Release.config
