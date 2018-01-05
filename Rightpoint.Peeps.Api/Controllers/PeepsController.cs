@@ -48,6 +48,8 @@ namespace Rightpoint.Peeps.Api.Controllers
                 // Randomize order and return no more than 50 peeps
                 peepsByArgs = result.Peeps.OrderBy(x => Guid.NewGuid()).Take(30).ToList();
 
+                DoSpookyScary(peepsByArgs);
+
                 return Request.CreateResponse(HttpStatusCode.OK, new Company()
                 {
                     Peeps = peepsByArgs
@@ -79,22 +81,39 @@ namespace Rightpoint.Peeps.Api.Controllers
             });
         }
 
-        //[HttpGet]
-        //[Route("api/peeps/{peep}")]
-        //public HttpResponseMessage Photo([FromUri]string peep)
-        //{
-        //    var source = HttpUtility.UrlDecode(peep);
+        private void DoSpookyScary(ICollection<Peep> peepsByArgs)
+        {
+            // Special Spooky Halloween Pictures
+            var spookyPic = new List<string>
+                {
+                    "cat.jpg",
+                    "ghost.jpg",
+                    "jack.jpg",
+                    "skeleton.jpg",
+                    "cat.jpg",
+                    "ghost.jpg",
+                    "jack.jpg",
+                    "skeleton.jpg",
+                    "cat.jpg",
+                    "ghost.jpg",
+                    "jack.jpg",
+                    "skeleton.jpg"
+                };
 
-        //    var result = new HttpResponseMessage(HttpStatusCode.OK);
-        //    String filePath = HttpContext.Current.ApplicationInstance.Server.MapPath(source);
-        //    FileStream fileStream = new FileStream(filePath, FileMode.Open);
-        //    Image image = Image.FromStream(fileStream);
-        //    MemoryStream memoryStream = new MemoryStream();
-        //    image.Save(memoryStream, ImageFormat.Jpeg);
-        //    result.Content = new ByteArrayContent(memoryStream.ToArray());
-        //    result.Content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
+            var random = new Random();
+            var dayNumber = DateTime.Now.DayOfYear;
+            var spookyStart = 302;
+            var spookyEnd = 305;
+            if (dayNumber >= spookyStart && dayNumber < spookyEnd)
+            {
+                foreach (var peep in peepsByArgs)
+                {
+                    int index = random.Next(spookyPic.Count);
+                    var photo = spookyPic[index];
 
-        //    return result;
-        //}
+                    peep.Photo = $"spooky/{spookyPic[index]}";
+                }
+            }
+        }
     }
 }
